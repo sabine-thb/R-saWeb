@@ -1,0 +1,132 @@
+
+.img-entete-dest{
+    background-image:url(./images/vrac/Destinations.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    width:100vw;
+    height:30vw;
+    flex: none;
+}
+
+.nosDest{
+  position: absolute;
+  top:32vw;
+  left:2vw;
+  font-family: 'Kufam';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 62px;
+  color:white;
+
+}
+
+.citationDestinations{
+    font-family: 'Kufam', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align:center; 
+    color:#763535;
+    background-color:#CDC5B5;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.ficheDest{
+  display:flex;
+  margin:20px;
+}
+
+.blocimg{
+  width:100vw; 
+  height:25vw; 
+  background-size:cover;
+  background-position:center;
+  margin:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PLACE AUX MEDIA QUERIES*/
+
+
+
+
+@media(max-width:1024px) {    /*Je diminue toutes les tailles de polices*/
+  .citationDestinations{
+    font-size:1rem;
+  }
+
+  .nosDest{
+    font-size:2rem;
+    top:34vw;
+  } 
+}
+
+@media(max-width:880px){
+  .citationDestinations{
+    font-size:0.8rem;
+  }
+
+  .nosDest{
+    font-size:1.8rem;
+    top:35vw;
+  } 
+
+}
+
+
+@media(max-width:600px){
+  .citationDestinations{
+    font-size:0.7rem;
+  } 
+
+  .nosDest{
+    font-size:1.2rem;
+    top:38vw;
+  } 
+}
+
+
+@media(max-width:510px){
+  .nosDest{
+      font-size:0.8rem;
+      top:42vw;
+  }
+}
+
+
+
+@media(max-width:440px){
+  .nosDest{
+      font-size:0.6rem;
+      top:45vw;
+  }
+}
+
+@media(max-width:400px){
+  .nosDest{
+      top:47vw;
+  }
+}
+
+@media(max-width:350px){
+  .nosDest{
+      top:50vw;
+  }
+}
