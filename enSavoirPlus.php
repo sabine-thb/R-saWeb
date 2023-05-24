@@ -12,12 +12,31 @@
 
 <body id="body" class="light-mode">
     <header>
-        <nav class="light-mode" id="nav">
-            <a href="index.php"><img src="icones/trone.svg" class="logo" alt="accueil"></a>
+    <nav class="light-mode" id="nav">
             <a href="index.php" class="lien light-mode" id="accueil">
+                <img src="./icones/trone.svg" class="logo" alt="accueil">
                 <h1 class="titreSite">Gotatrip</h1>
             </a>
             <ul class="menu">
+                <li class="menuPrincipal">
+                    <a href="./destinations.php" class="lien light-mode">Nos destinations</a>
+                </li>
+                <li class="menuPrincipal">
+                    <a href="packs.php" class="lien light-mode">Nos packs</a>
+                </li>
+                <li class="menuPrincipal">
+                    <a href="./enSavoirPlus.php" class="lien light-mode">En savoir plus</a>
+                </li>
+                <li class="menuPrincipal">
+                    <img src="./icones/menuBlackBurger" class="burger light-mode" alt="menu">
+                </li>
+                <li>
+                    <button type="button" name="dark_light" class="mode light-mode" id="button"
+                        title="Toggle dark/light mode"><img src="./icones/moonWhite.svg" class="moon"
+                            alt="mode sombre"></button>
+                </li>
+            </ul>
+            <ul class="menuBurger">
                 <li>
                     <a href="./destinations.php" class="lien light-mode">Nos destinations</a>
                 </li>
@@ -28,14 +47,10 @@
                     <a href="./enSavoirPlus.php" class="lien light-mode">En savoir plus</a>
                 </li>
                 <li>
-                    <img src="./icones/menuBlackBurger" class="menuBurger light-mode" alt="menu">
-                </li>
-                <li>
                     <button type="button" name="dark_light" class="mode light-mode" id="button"
                         title="Toggle dark/light mode"><img src="./icones/moonWhite.svg" class="moon"
                             alt="mode sombre"></button>
-                </li>
-            </ul>
+                </li>  
             </ul>
         </nav>
     </header>

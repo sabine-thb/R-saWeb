@@ -37,7 +37,7 @@ nav a {
     color: #010b12;
 }
 
-nav {
+nav{
     width: 100vw;
     height: 120px;
     background-color: #fafbfc;
@@ -90,6 +90,10 @@ nav ul {  /*Menu*/
     list-style-type: none;
 }
 
+.menuBurger li {
+    list-style-type: none;
+}
+
 .menu a {
     display: flex;
     padding-top: 25px;
@@ -107,6 +111,23 @@ ul .lien:hover {
 
 li:nth-of-type(4){ /*Je mets mon burger invisible*/
     display:none;
+    
+}
+
+/*Je mets en place mon menu burger*/
+
+.menuBurger{
+    display:none;
+    flex-direction:column;
+    justify-content:flex-start;
+    background-color: #fafbfc;
+    margin-top:80px;
+    padding:30px;
+    position:absolute;
+    right:-300px;
+    padding-right:60px;
+    transition: all 0.5s ease-in-out;
+    height:92vh;
     
 }
 
@@ -140,7 +161,6 @@ footer{
     align-items:flex-start;
     gap:3rem;
     margin-top:50px;
-    background-color:#CDC5B5;
     padding-right:40px;
     padding-left:40px;
     height:fit-content;
@@ -256,6 +276,10 @@ nav.dark-mode {
 
 a.dark-mode {
     color: #fafbfc;
+}
+
+.menuBurger.dark-mode{
+    background-color: #010b12;
 }
 
 ul .lien.dark-mode:hover {
@@ -445,7 +469,7 @@ button.light-mode {
     }
 
     .titreSite{
-        top:10px;
+        top:12px;
         left:-35px;
     }
 
@@ -462,7 +486,7 @@ button.light-mode {
     .logo {
         width: 150px;
         left:-25px;
-        top: 0px;
+        top: 2px;
     }
 
     .footerPartDroite{
@@ -503,14 +527,14 @@ button.light-mode {
     }
 }
 @media(max-width:680px){
-    nav ul{
+    .menu{
         right:20px;
         gap:1rem;
         
     }
 
 
-    nav li{
+    .menuPrincipal{
         display:none; 
     }
 
@@ -522,17 +546,17 @@ button.light-mode {
         left:-45px;
     }
 
-    li:nth-of-type(5){   /* Je laisse le mode nuit possible*/
+    .menuPrincipal:nth-of-type(5){   /* Je laisse le mode nuit possible*/
         display:flex;    
     }
 
-    li:nth-of-type(4){   /* Je fais apparaitre le menu burger*/
+    .menuPrincipal:nth-of-type(4){   /* Je fais apparaitre le menu burger*/
         display:flex;
         position:relative;
         top:10px;
     }
 
-    .menuBurger:hover{
+    .burger:hover{
         width:45px;
     }
 
@@ -561,5 +585,21 @@ button.light-mode {
     justify-content:flex-start;
 
  }
+
+
  
+ 
+}
+@media(max-width:360px){
+    .footerDescription{
+        width:70vw;
+    }
+
+    .footerPartGauche{
+        width:70vw;
+    }
+
+    .footerContainer1{
+        width:70vw;
+    }
 }

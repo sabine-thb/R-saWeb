@@ -49,6 +49,9 @@
 form{
     padding:15px 30px 15px 30px;
     display:flex;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:20px;
     margin-bottom:30px;
 }
 
@@ -59,10 +62,11 @@ form{
     width:500px;
     align-items:center;
     margin-right:0;
+
 }
 
 input{
-    font-size:1.4rem;
+    font-size:1.3rem;
     font-family: 'Kufam', sans-serif;
     padding:10px;
     border:0px;
@@ -90,12 +94,10 @@ select{
     font-size:1.3rem;
     padding:10px;
     border:0px;
-    margin-right:60px;
 }
 
 .filtre{
     font-family: 'Kufam', sans-serif;
-    margin-top:20px;
     font-size:1.3rem;
     padding:10px 10px 10px 10px;
     border:0px;
@@ -525,7 +527,6 @@ select{
     select{
         width:150px;
         font-size:0.7rem;
-        margin-right:20px;
     }
     
     .filtre{
@@ -599,6 +600,8 @@ select{
     .descrNouveaute{
         font-size:0.6rem;
     }
+
+   
 }
 
 @media(max-width:640px){
@@ -623,14 +626,6 @@ select{
     .cartesContainer{
         left:-216vw;
         gap:2vw;
-    }
-
-    form{
-        flex-wrap:wrap;
-    }
-
-    .searchBar{
-        margin-bottom:25px;
     }
 
     .select{
@@ -722,3 +717,13 @@ select{
         width:60vw;
     }
   }
+
+@media(max-width:380px){
+    .searchBar{
+        width:230px;
+    }
+
+    .search{
+        font-size:0.5rem;
+    }
+}

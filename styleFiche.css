@@ -122,7 +122,7 @@ main{
 }
 
 .destAssoc{
-    color:#566fc9;
+    color:#835e14;
     margin:10px 10px 0px 0px;
     font-weight:600;
     transition: all 0.3 ease-in-out;
@@ -130,7 +130,7 @@ main{
 }
 
 .destAssoc.dark-mode{
-    color:#857de0;
+    color:#9490c4;
 }
 
 .destAssoc:hover{
@@ -358,7 +358,8 @@ label {
 }
 
 
-@media(max-width:600px){
+
+@media(max-width:600px) {
     .recap,.total{
         font-size:1rem;
     }
@@ -387,29 +388,25 @@ label {
         height:20px;
  
     }
-   
-}
-
-/*A partir d'une certaine largeur, j'évite les polices en vw car la taille devient trop ridicule avec la largeur d'écran*/
-@media(max-width:430px) {
+    /*A partir d'une certaine largeur, j'évite les polices en vw car la taille devient trop ridicule avec la largeur d'écran*/
     .reservation {
         margin-top: 0;
     }
 
     .descrLong {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
     }
 
     .destAssoc{
-        font-size:0.5rem;
+        font-size:0.7rem;
     }
 
     .nomGOT {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .vraiNom {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 
     .reservation {
@@ -417,7 +414,7 @@ label {
     }
 
     .prix {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .avion {
@@ -426,7 +423,7 @@ label {
     }
 
     .boutonReserve {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
 

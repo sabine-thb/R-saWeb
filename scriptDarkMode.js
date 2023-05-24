@@ -2,15 +2,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     //MISE EN PLACE DE L'EFFET NUIT
-    var selecButton = document.querySelector('.mode')
-    var selecMoon = document.querySelector('.moon')
-    var selecBurger = document.querySelector(".menuBurger")
-    var selecLogo=document.querySelector(".logo")
+    var selecButton = document.querySelector('.mode');
+    var selecMoon = document.querySelector('.moon');
+    var selecBurger = document.querySelector(".burger");
+    var selecLogo=document.querySelector(".logo");
     var selecAvion=document.querySelectorAll(".avion"); //Je sélectionne tous mes éléments avions
     var largeur = window.innerWidth;  /*Test qui marche comme un media query mais en js*/
 
     function darkMode() {
-        const elements = document.querySelectorAll('body, a, #button, #nav, .lien, .fondViolet,.ecritureBlanche, .ecritureBeige, .backgroundFiche, .arrowMode, .popup');
+        const elements = document.querySelectorAll('body, a, #button, #nav, .lien, .fondViolet,.ecritureBlanche, .ecritureBeige, .backgroundFiche, .arrowMode, .popup, .menuBurger');
         elements.forEach(element => {
             element.classList.add('dark-mode');
             element.classList.remove('light-mode')
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         selecMoon.src = "icones/moonBlack.svg"
         selecLogo.src="icones/trone2.svg"
         selecBurger.src="icones/menuWhiteBurger.svg"
-        localStorage.setItem("mode", 'dark-mode')
+        localStorage.setItem("mode", 'dark-mode');
         console.log(localStorage.getItem("mode"))
 
         
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     function lightMode() {
-        const elements = document.querySelectorAll('body, a, #button, #nav, .lien, .fondViolet,.ecritureBlanche, .ecritureBeige, .backgroundFiche, .arrowMode, .popup');
+        const elements = document.querySelectorAll('body, a, #button, #nav, .lien, .fondViolet,.ecritureBlanche, .ecritureBeige, .backgroundFiche, .arrowMode, .popup, .menuBurger');
         elements.forEach(element => {
             element.classList.add('light-mode');
             element.classList.remove('dark-mode')
@@ -97,32 +97,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     eviteClignote();
 
-    function refresh(){        /*Je fais refresh la page dès que je resize pour ue lqa largeur du slider soit ok même lorsque l'on franchit une largeur d'écran de 600px*/ 
-        window.location.reload();
-    }
+    // function refresh(){        /*Je fais refresh la page dès que je resize pour ue lqa largeur du slider soit ok même lorsque l'on franchit une largeur d'écran de 600px*/ 
+    //     window.location.reload();
+    // }
 
     // window.addEventListener('resize', refresh);
 
+    //J'ai finalement décidé de ne pas mettre cette fonction car le fait de faire actualiser en permanence le site fait qu'il clignotte à cause du mode jour/nuit
 
-    // var selecNav=document.querySelector(".nav")
-    // var selecImgTransition=document.querySelectorAll(".imgTransition")
 
-    // function transition(){ //Pour que au resize on ne voit pas les transisitions que j'ai ajouté pour certains de mes éléments
-    //     if(window.addEventListener('resize',function(){
-    //         selecNav.style.transition="0s";
-    //         selecImgTransition.forEach (function(element){
-    //             element.style.transition="0s";
-    //         })
-    //     }))
+    var menuBurger=document.querySelector(".menuBurger");
 
-    //     else{
-    //         selecNav.style.transition="all 0.6s ease-in-out";
-    //         selecImgTransition.forEach (function(element){
-    //             element.style.transition="all 0.6s ease-in-out";
-    //         })
-    //     }
-    // }
+    selecBurger.addEventListener('click',function (){
+        var burgerStyle = window.getComputedStyle(menuBurger);
 
-    // transition();
+        if(burgerStyle.display=="none"){
+            menuBurger.style.display="flex";
+        }else{
+            menuBurger.style.display="none";
+        }
+
+        if (burgerStyle.right == "-300px") {
+            menuBurger.style.right = "0px"; // Ferme le menu en le faisant sortir de l'écran à droite
+          } else {
+            menuBurger.style.right = "-300px"; // Ouvre le menu en le déplaçant vers la position visible à droite
+          }
+        
+    })
+
+
+
+
+  
 
 })
