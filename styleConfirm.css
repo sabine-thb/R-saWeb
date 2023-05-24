@@ -1,0 +1,28 @@
+.retourContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    margin-top: 30px;
+
+
+}
+
+.retour {
+    color: #fafbfc;
+    text-decoration: none;
+    background-color: #566fc9;
+    border-radius: 20px;
+    padding: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.retour:hover {
+    background-color: #515667;
+
+}
+
+.msgConfirmContainer {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}

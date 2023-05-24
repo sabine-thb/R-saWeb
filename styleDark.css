@@ -1,0 +1,565 @@
+/*Cette feuille de style s'applique à toutes les pages html de mon site de réservation*/
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Game of Thrones';
+    src: url('fonts/got.woff2') format('woff2');
+    font-weight: bold;
+
+}
+
+@font-face {
+    font-family: 'Kufam';
+    src: url('fonts/Kufam-VariableFont_wght.woff2') format('woff2');
+    
+
+}
+
+body {
+    transition: 0.5s ease-in-out;
+    margin:0;
+    padding-top:120px; /*Je mets un padding-top égal à la hauteur de ma nav pour gérer le positionnement fixed de celle ci*/
+    font-family: 'Kufam', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size:1rem;
+    line-height: 1.6;
+}
+
+
+/*Je mets donc en place mon menu visible sur toutes les pages du site*/
+
+nav a {
+    text-decoration: none;
+    color: #010b12;
+}
+
+nav {
+    width: 100vw;
+    height: 120px;
+    background-color: #fafbfc;
+    transition: 0.5s ease-in-out;
+    position: fixed;
+    z-index:1000;
+    top:0;/*Permet de bien mettre le contenu de ma nav dans le padding top du body */
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.08);
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.08);
+    
+}
+
+.logo {
+    width: 250px;
+    position: absolute;
+    left: -50px;
+    top: -6px;
+}
+
+
+.titreSite {   /*titre du site*/
+    font-family: 'Game of Thrones', sans-serif;
+    font-size: 2rem;
+    padding: 20px;
+    margin-left: 90px;
+    margin-bottom:0;
+
+}
+
+#accueil {
+    width: 200px;
+    display: block;
+}
+
+nav ul {  /*Menu*/
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-family: 'Game of Thrones', sans-serif;
+    font-size: 0.8rem;
+    gap:3rem;
+    
+}
+
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu a {
+    display: flex;
+    padding-top: 25px;
+}
+
+.lien {
+    transition: 0.5s ease-in-out;
+}
+
+ul .lien:hover {
+    border: solid 1px #010b12;
+    transition: 0.5s ease;
+    padding: 10px;
+}
+
+li:nth-of-type(4){ /*Je mets mon burger invisible*/
+    display:none;
+    
+}
+
+
+.mode {
+    /* Je positionne mon bouton mode light/dark à droite et lui donne sa couleur initiale*/
+    background-color: #010b12;
+    color: #fafbfc;
+    border-radius: 15px;
+    border: none;
+    transition: all 1s ease-in-out;
+    cursor:pointer;
+}
+
+.mode:hover {
+    /*Pour changer la taille du bouton au survol */
+    width: 60px;
+    height: 50px;
+    
+}
+
+
+
+/*Je mets en place mon footer qui sera identique sur toutes les pages*/
+
+
+footer{
+
+    display:flex;
+    justify-content: space-around;
+    align-items:flex-start;
+    gap:3rem;
+    margin-top:50px;
+    background-color:#CDC5B5;
+    padding-right:40px;
+    padding-left:40px;
+    height:fit-content;
+    -moz-height:fit-content;
+    
+}
+
+.footerPartGauche{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+
+}
+
+.footerPartDroite{
+    display:flex;
+    column-gap:10rem; 
+}
+
+.titreFooter{
+    font-family:'Game of Thrones', sans-serif;
+    position:relative;
+    top:70px;
+    left:-140px;
+
+}
+
+.plan{
+    height:300px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    gap:0.5rem;
+}
+
+.savPlus{
+    height:300px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    gap:0.5rem;
+}
+
+.footerDescription{
+    max-width:600px;
+    z-index:100;
+    position:relative;
+    top:0px;
+
+}
+.footerContainer1{
+    display:flex;
+}
+
+.footerTrone{
+    width:200px;
+    position:relative;
+    left:-75px;
+    top:55px;
+}
+
+.lienFooter{
+    text-decoration: none;
+    font-weight:400;
+    color:#010b12;
+}
+
+.lienFooter:hover{
+    font-weight:600;
+    transition: 0.5s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Je mets les couleurs de certains éléments en fonction du mode dark ou light de la page */
+
+/* Mise en place du dark mode */
+
+
+body.light-mode{
+    background-color: #fafbfc;
+    color: #010b12;
+}
+
+body.dark-mode {
+    background-color: #010b12;
+    color: #fafbfc;
+}
+
+nav.dark-mode {
+    background-color: #010b12;
+    box-shadow: 0px 10px 5px 0px rgba(255, 255, 255, 0.08);
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(255, 255, 255, 0.08);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(255, 255, 255, 0.08);
+}
+
+a.dark-mode {
+    color: #fafbfc;
+}
+
+ul .lien.dark-mode:hover {
+    border: solid 1px #fafbfc;
+    transition: 0.5s ease;
+    padding: 10px;
+}
+
+
+
+button.dark-mode {
+    background-color: #fafbfc;
+    color: #010b12;
+}
+
+
+button.light-mode {
+    background-color: #010b12;
+    color: #fafbfc;
+}
+
+.fondViolet.dark-mode{
+    background-color: rgba(117, 128, 167, 0.51);
+    color:#fafbfc;
+
+}
+
+.fondViolet.light-mode{
+    background-color:#CDC5B5 ;
+    
+
+}
+
+.retourDest.dark-mode{
+    color:#010b12;
+}
+
+.retourDest.dark-mode:hover{
+    color:#fafbfc;
+}
+.ecritureBeige.dark-mode{
+    color:#DCCAA8;
+}
+
+.ecritureBeige.light-mode{
+    color:#763535;
+}
+
+.backgroundFiche.light-mode{
+    background-color: rgba(1, 1, 1, 0.20);
+}
+
+.backgroundFiche.dark-mode{
+    background-color: rgba(117, 128, 167, 0.15);
+}
+
+.arrowMode.dark-mode{
+    border-top: 2px solid #fafbfc;
+    border-left: 2px solid #fafbfc;
+}
+
+.popup.dark-mode{
+    background-color: #010b12;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PLACE AUX MEDIA QUERIES*/
+@media(max-width:1220px){
+
+    .sTitreFooter{
+        font-size:1rem;
+    }
+}
+
+
+@media(max-width:1170px){
+
+    .footerPartDroite{
+        gap:5rem;
+    }
+}
+
+
+@media(max-width:1024px) {    /*Je diminue toutes les tailles de polices*/
+
+    h1{
+        font-size: 1.4rem !important; /*Je change la taille de tous mes h1*/
+
+    }
+
+    .titreSite{                          
+        padding-top: 15px;
+        position:relative;
+        left:-30px;
+    }
+
+    body{ /* Je diminue la hauteur de ma nav*/
+        padding-top:80px;
+    }
+
+    nav{
+        height:80px;
+    }                      
+
+    nav ul li a {
+        font-size: 0.6rem;
+
+    }
+
+    nav ul {
+        top:0px;
+    }
+
+    .logo {
+        width:200px;
+        left:-50px;
+        top:-15px;
+    }
+
+    .moon{
+        width:30px;
+    }
+
+    .mode:hover {
+        /*Pour changer la taille du bouton au survol */
+        width: 50px;
+        height: 40px;
+    }
+
+    .mode{
+        position:relative;
+        top:10px;
+    }
+
+    .footerPartDroite{
+        gap:3rem;
+    }
+
+    .footerDescription{
+        font-size: 0.8rem;
+        margin:10px;;
+        max-width:500px;
+    }
+
+    .lienFooter{
+        font-size:0.8rem;
+    }
+
+    .footerTrone{
+        top:40px;
+    }
+
+    .footerContainer1{
+        position:relative;
+        top:20px;
+    }
+
+
+}
+
+@media(max-width:880px){
+
+    h1{
+        font-size: 1rem !important;
+    }
+
+    .titreSite{
+        top:10px;
+        left:-35px;
+    }
+
+    .menu{
+       top:8px;
+    }
+
+    nav ul li a {
+        font-size: 0.5rem;
+
+    }
+
+
+    .logo {
+        width: 150px;
+        left:-25px;
+        top: 0px;
+    }
+
+    .footerPartDroite{
+        gap:3rem;
+    }
+
+    .footerDescription{
+        max-width:400px;
+        font-size: 0.6rem;
+        margin:0;
+    }
+
+    .footerTrone{
+        top:25px;
+    }
+
+    .sTitreFooter{
+        font-size:0.8rem;
+    }
+
+    .lienFooter{
+        font-size:0.6rem;
+    }
+
+    .plan{
+        gap:0.3rem;
+    }
+
+    .savPlus{
+        gap:0.3rem;
+    }
+
+}
+
+@media(max-width:760px){
+    .footerDescription{
+        max-width:300px;
+    }
+}
+@media(max-width:680px){
+    nav ul{
+        right:20px;
+        gap:1rem;
+        
+    }
+
+
+    nav li{
+        display:none; 
+    }
+
+    .titreSite{
+        left:-60px;
+    }
+
+    .logo{
+        left:-45px;
+    }
+
+    li:nth-of-type(5){   /* Je laisse le mode nuit possible*/
+        display:flex;    
+    }
+
+    li:nth-of-type(4){   /* Je fais apparaitre le menu burger*/
+        display:flex;
+        position:relative;
+        top:10px;
+    }
+
+    .menuBurger:hover{
+        width:45px;
+    }
+
+}
+
+@media (max-width:660px){
+ footer{
+    flex-direction:column;
+    gap:0;
+ }
+
+ .footerDescription{
+    max-width:500px;
+ }
+
+ .footerPartDroite{
+    align-items:flex-start;
+    margin-top:30px;
+ }
+
+ .savPlus{
+    justify-content: flex-start;
+ }
+
+ .plan{
+    justify-content:flex-start;
+
+ }
+ 
+}

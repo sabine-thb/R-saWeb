@@ -1,0 +1,277 @@
+
+.img-entete-ensavplus{
+    background-image:url(./images/vrac/enSavoirPlus.jpg);
+    background-position: top;
+    height:45vw; /*Si je mets une plus élevée que celle-là, alors barre de scroll horizontale*/
+    background-size:cover;
+    background-repeat: no-repeat;
+    flex: none;
+}
+
+.ensavplus{
+    position: absolute;
+    top:46vw;
+    left:2vw;
+    font-family: 'Kufam';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 62px;
+    color:white;
+    border-radius:20px;
+
+}
+
+.sloggan2{
+    font-family: 'Kufam', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align:center; 
+    color:#763535;
+    background-color:#CDC5B5;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+
+.sousTitreContainer{
+    display:flex;
+    justify-content: flex-end;
+    margin-right:30px;
+}
+
+.sousTitre{
+    color:#763535;
+    font-size:2rem;
+    margin-bottom:0;
+    margin-right:10px;
+}
+
+.section{
+    background-color: #CDC5B5;
+    margin-bottom:40px;
+    margin-left:40px;
+    margin-right:40px;
+    padding:60px;
+}
+
+.bold{
+    font-weight:bold;
+}
+
+.descr{
+    margin-bottom:40px;
+}
+
+.etape{
+    display:flex;
+    align-items: flex-start; /*??*/
+    gap:20px;
+    max-width:500px;
+    margin-bottom:20px;
+    
+}
+
+.number{
+    font-size:3rem;
+    color:#763535;
+    margin-top:0;
+    margin-bottom:0;
+    line-height: 1;
+}
+
+.explication{
+    margin-top:0;
+}
+
+.creatrice{
+    display:flex;
+    align-items: center;
+    gap:50px;
+}
+
+.img{
+    width:20vw;
+    height:25vw;
+    background-image:url(./images/PhotoSabine.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius:10px;
+}
+
+.txt{
+    max-width:800px;
+}
+
+.encre{
+    height:20px;
+    width:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*PLACE AUX MEDIA QUERIES*/
+
+@media(max-width:1300px){
+    .txt{
+        max-width:700px;
+    }
+}
+
+@media(max-width:1150px){
+    .txt{
+        max-width:600px;
+    }
+}
+
+@media(max-width:1024px) {    /*Je diminue toutes les tailles de polices*/
+    .ensavplus{
+        font-size:2rem;
+        top:45vw;
+    }
+
+    .sloggan2{
+        font-size:1rem;
+    }
+
+    .descr, .etape, .txt{
+        font-size:0.8rem;
+    }
+
+    .txt{
+        max-width:480px;
+    }
+
+}
+
+@media(max-width:880px){
+    .ensavplus{
+        font-size:1.8rem;
+    }
+
+    .sloggan2{
+        font-size:0.8rem;
+    }
+
+    .descr, .etape, .txt{
+        font-size:0.6rem;
+    }
+
+    .txt{
+        max-width:350px;
+    }
+
+    .section{
+        padding:30px;
+    }
+
+    .number{
+        font-size:2rem;
+    }
+
+    .etape{
+        max-width:400px;
+    }
+
+}
+
+@media(max-width:680px){
+    .ensavplus{
+        font-size:1.4rem;
+        top:47vw;
+    }
+
+    .descr, .etape, .txt{
+        font-size:0.5rem;
+    }
+
+    .creatrice{
+        gap:20px;
+    }
+
+    .txt{
+        max-width:300px;
+    }
+
+    .etape{
+        max-width:250px;
+    }
+
+    .sousTitre{
+        font-size:1.5rem;
+    }
+
+}
+
+
+
+@media(max-width:600px){
+    .ensavplus{
+        font-size:1.2rem;
+        top:48vw;
+    }
+
+    .sloggan2{
+        font-size:0.7rem;
+      } 
+
+    .creatrice{
+        flex-wrap:wrap;
+    }
+
+    .img{
+        width:70vw;
+        height:30vw;
+    }
+    .txt{
+        max-width:500px;
+    }
+
+    .section{
+        margin-left:20px;
+        margin-right:20px;
+        margin-bottom:20px;
+    }
+}
+
+@media(max-width:510px){
+    .ensavplus{
+        font-size:0.8rem;
+        top:50vw;
+    }
+}
+
+
+
+@media(max-width:440px){
+    .ensavplus{
+        top:51vw;
+    }
+
+    .sousTitre{
+        font-size:1.2rem;
+    }
+
+}
+
+@media(max-width:400px){
+    .ensavplus{
+        top:52vw;
+    }
+}
+
+

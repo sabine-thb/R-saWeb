@@ -1,0 +1,458 @@
+
+.img-entete-dest{
+    background-image:url(./images/vrac/destinations.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height:30vw;
+    flex: none;
+}
+
+.nosDest{
+  position: absolute;
+  top:32vw;
+  left:2vw;
+  font-family: 'Kufam';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 62px;
+  color:white;
+
+}
+
+.citationDestinations{
+    font-weight: bold;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align:center; 
+    color:#763535;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+
+/*Je mets en place les éléments sur mes fiches destinations*/
+
+.ficheDest{
+  height:35vw;
+  overflow: hidden; /*Pour que le border radius soit aussi sur mon slider*/
+  display:flex;
+  align-items:center;
+  margin-right:30px;
+  margin-left:30px;
+  margin-top:100px;
+  border-radius: 10px;
+  box-shadow: -5px 10px 5px 0px rgba(0,0,0,0.10);
+-webkit-box-shadow: -5px 10px 5px 0px rgba(0,0,0,0.10);
+-moz-box-shadow: -5px 10px 5px 0px rgba(0,0,0,0.10);
+  
+}
+
+
+.text{
+  display:flex;
+  flex-direction:column;
+  margin:30px;
+}
+
+
+.nomGOT{
+  font-family: 'Game of Thrones', sans-serif;
+  font-size: 2rem;
+  margin-top:60px;
+}
+
+.vraiNom{
+  align-self:flex-end;
+  margin:0;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 29px;
+}
+
+.descrCourt{
+  max-width:1200px;
+  margin-bottom:15px;
+  margin-top:25px;
+
+}
+
+.enSavPlus{
+  align-self:flex-end;
+  color: #010b12;
+  transition:all 0.3s ease-in-out;
+  z-index:100;
+}
+
+.enSavPlus:hover{
+  font-weight:600;
+}
+
+.prixContainer{
+  display:flex;
+  align-items:center;
+  position:relative;
+  bottom:0;
+
+}
+
+.prix1{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin:0;
+}
+
+.avion{
+  width: 48px;
+  height: 48px;
+  transform: rotate(51.58deg);
+
+}
+
+.ficheDest:last-of-type{
+  margin-bottom:100px;
+}
+
+.divLienPacks{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.lienPacks{
+    color:#010b12;
+    margin-right:40px;
+    transition:all 0.3s ease-in-out;
+    padding:20px;
+}
+
+.lienPacks:hover{
+  font-weight:600;
+}
+
+
+
+
+
+
+
+/*Je mets en place le slider dans mes blocs image*/
+
+.blocimg{ 
+  width:40vw;
+  height:35vw;
+  background-size:cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  flex: none;
+  flex-shrink: 0;
+}
+
+
+.js-slider {
+  width:40vw;  
+  height:35vw; 
+  overflow: hidden;
+  flex-shrink: 0;
+  position:relative;
+}
+
+.js-photos {
+  display: flex;
+  position: relative;
+  left:0;
+  /*et on va bouger son left en JS pour le déplacer*/
+  transition: left 0.6s ease-out;
+}
+
+.js-btn-decale-gauche {
+  position: absolute;
+  right:10px;
+  top:50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  cursor: pointer;
+}
+.arrow{
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  transform: rotate(-45deg);
+  position: relative;
+  left: 1px;
+  left: -1px;
+  transform: rotate(135deg);
+}
+  
+
+
+
+
+/*Je mets en place les éléments en cas de recherche sans issue*/
+
+.erreurContainer{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:100px;
+}
+
+.imgErreur{
+  width:40vw;
+  height:25vw;
+  background-image: url(./images/erreur/erreur.jpg);
+  background-size: cover;
+  flex:none;
+  border-radius:10px;
+}
+
+.msgErreur{
+  margin:30px;
+}
+
+.retourAcc{
+  display:flex;
+  justify-content:flex-end;
+  
+}
+.lienAcc{
+  color:#010b12;
+  transition:all 0.3s ease-in-out;
+  margin-right:40px;
+  padding:20px;
+}
+
+.lienAcc:hover{
+  font-weight:600
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PLACE AUX MEDIA QUERIES*/
+
+@media(max-width:1095px){
+  .prixContainer{
+    bottom:3vw;
+  }
+}
+@media(max-width:1185px){
+  .descrCourt{
+    margin-top:0px;
+  }
+}
+
+
+
+
+@media(max-width:1024px) {    /*Je diminue toutes les tailles de polices*/
+  .citationDestinations{
+    font-size:1rem;
+  }
+
+  .nosDest{
+    font-size:2rem;
+    top:30vw;
+  } 
+
+  .vraiNom{
+    font-size:1rem;
+  }
+
+  .enSavPlus{
+    font-size:0.7rem;
+    position:relative;
+    bottom:10px;
+  }
+
+  .descrCourt{
+    font-size:0.8rem;
+  }
+
+  .avion{
+    width:25px;
+    height:25px;
+  }
+
+  .prix1{
+    font-size:1rem;
+  }
+
+  .prixContainer{
+    bottom:2vw;
+  }
+
+}
+
+@media(max-width:950px){
+ .descrCourt{
+    font-size:0.7rem;
+    line-height:20px;
+    margin-top:0;
+  }
+}
+
+@media(max-width:880px){
+  .citationDestinations{
+    font-size:0.8rem;
+  }
+
+  .nosDest{
+    font-size:1.8rem;
+  } 
+
+  .nomGOT{
+    font-size:1.5rem;
+  }
+
+  .vraiNom{
+    font-size:0.8rem;
+  }
+
+  .enSavPlus{
+    font-size:0.6rem;
+  }
+
+  .descrCourt{
+    font-size:0.6rem;
+    line-height:1.5;
+    margin-top:0;
+  }
+
+  .avion{
+    width:25px;
+  }
+
+  .prix1{
+    font-size:0.8rem;
+  }
+
+
+}
+
+@media(max-width:760px){
+
+  .nomGOT{
+    margin-bottom:0px;
+    margin-top:0;
+    font-size:1.2rem;
+  }
+
+  .imgErreur{
+    width:60vw;
+    height:45vw;
+  }
+
+  .msgErreur{
+    font-size:0.8rem;
+  }
+}
+
+@media(max-width:680px){
+  .vraiNom{
+    line-height: 12px;
+    padding-top:5px;
+    padding-bottom:5px;
+  }
+
+  .descrCourt{
+    font-size:0.5rem;
+    line-height:12px;
+  }
+}
+
+@media(max-width:600px){
+  .citationDestinations{
+    font-size:0.7rem;
+  } 
+
+  .nosDest{
+    font-size:1.2rem;
+    top:32vw;
+  } 
+
+  .toutesDest{
+    display:flex;
+    flex-direction:column;
+    row-gap: 50px;
+  }
+
+  .ficheDest{  /*Je mets mes fiches destinations en colonne*/
+    flex-wrap:wrap;
+    height:fit-content;
+    width:85vw;
+    margin:auto;
+    flex-shrink: 0;
+  }
+
+  .nomGOT{
+    margin:0;
+  }
+
+
+  .js-slider{
+    width:85vw;
+    margin:auto;
+  }
+
+
+  .imgContainer{    /*Je fais en sorte que mon image ait une largeur égale à ma fiche destination en mettant 100% ( 100% de la taille du parent)*/
+    width:100%;
+  }
+
+
+  .blocimg{
+    width:85vw;
+  }
+
+  
+}
+
+
+@media(max-width:510px){
+  .nosDest{
+      font-size:0.8rem;
+      top:36vw;
+  }
+
+  .erreurContainer{
+    margin-top:30px;
+  }
+}
+
+
+
+@media(max-width:440px){
+  .nosDest{
+      top:36vw;
+  }
+}
+
+@media(max-width:400px){
+  .nosDest{
+      top:38vw;
+  }
+}
+

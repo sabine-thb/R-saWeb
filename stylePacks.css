@@ -1,0 +1,505 @@
+.img-entete-packs{
+    background-image:url(./images/vrac/north.jpg);
+    background-position: center;
+    height:45vw; 
+    background-size:cover;
+    background-repeat: no-repeat;
+    flex: none;
+}
+
+.nosPacks{
+    position: absolute;
+    top:45vw;
+    left:2vw;
+    font-family: 'Kufam';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 2;
+    color:white;
+    border-radius:20px;
+
+}
+
+/*mise en place de l'introduction aux packs de voyage*/
+
+.introContainer{
+  display:flex;
+  justify-content:center;
+  margin:30px;
+  box-shadow: -5px 10px 5px 0px rgba(0,0,0,0.10);
+  -webkit-box-shadow: -5px 10px 5px 0px rgba(0,0,0,0.10);
+  -moz-box-shadow: -5px 10px 5px 0px rgba(0,0,0,0.10);
+}
+
+.intro{
+  padding:40px;
+}
+
+.bold{
+  font-weight:bold;
+}
+
+.newConcept{
+  padding:30px 50px 30px 50px;
+  margin-bottom:100px;
+  margin-top:100px;
+  font-weight:bold;
+  color:#763535;
+}
+
+
+
+/*mise en place des fiches de packs de voyage*/
+
+
+.fichePack{
+    height:fit-content;
+    display:flex;
+    flex-shrink: 0;
+    align-items:flex-start;
+    padding:40px;
+    margin-right:30px;
+    margin-left:30px;
+    margin-bottom:100px;
+    border-radius: 10px;
+    box-shadow: -5px 10px 5px 0px rgba(0,0,0,0.10);
+  -webkit-box-shadow: -5px 10px 5px 0px rgba(0,0,0,0.10);
+  -moz-box-shadow: -5px 10px 5px 0px rgba(0,0,0,0.10);
+    
+  }
+  
+  .text{
+    display:flex;
+    flex-direction:column;
+    margin-left:30px;
+    padding-right:40px;
+    padding-left:40px;
+  }
+  
+  .pays{
+   align-self: flex-end;
+   color:#763535;
+   font-weight: 700;
+   font-size: 20px;
+   margin-top:0;
+  }
+  
+  .nomGOT{
+    font-family: 'Game of Thrones', sans-serif;
+    font-size: 2rem;
+    margin-top:0;
+    margin-left:30px;
+  }
+  
+  .vraiNom{
+    align-self:flex-end;
+    margin:0;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+  
+
+  }
+  
+  .descrCourt{
+    max-width:1200px;
+    
+  
+  }
+  
+  .details{
+    align-self:flex-end;
+    color:#010b12;
+    margin-top:50px;
+    margin-bottom:160px;
+    transition:all 0.3s ease-in-out;
+  }
+
+  .details:hover{
+    font-weight:600;
+  }
+  
+  .prixContainer{
+    display:flex;
+    flex-direction:row;
+    position:relative;
+    right:45vw;
+  }
+  
+  .prix1{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  .avion{
+    width: 48px;
+    height: 48px;
+    transform: rotate(51.58deg);
+  
+  }
+
+
+  .divLienDest{
+    display:flex;
+    justify-content:flex-end;
+    margin-top:100px;
+  }
+  
+  .lienDest{
+    color:#010b12;
+    margin-right:40px;
+    transition:all 0.3s ease-in-out;
+    padding:20px;
+  }
+
+  .lienDest:hover{
+    font-weight:600;
+  }
+
+
+  
+/*Je mets en place le slider dans mes blocs image*/
+
+
+
+.js-slider {    /*Boite qui contient le slider*/
+  width:40vw;  
+  height:30vw; 
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  position:relative;
+}
+
+.js-photos {
+  display: flex;
+  position: relative;
+  left:0;
+  /*et on va bouger son left en JS pour le déplacer*/
+  transition: left 0.6s ease-out;
+  
+}
+
+.blocimg{ 
+  width:40vw;
+  height:30vw;
+  background-size:cover;
+  background-position:center;
+  flex-shrink: 0; /*Pour que l'image ne se divise pas !!*/
+}
+
+.js-btn-decale-gauche {
+  position: absolute;
+  right:10px;
+  top:50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  cursor: pointer;
+}
+.arrow{
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  transform: rotate(-45deg);
+  position: relative;
+  left: 1px;
+  left: -1px;
+  transform: rotate(135deg);
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+/*PLACE AUX MEDIA QUERIES*/
+
+@media(max-width:1300px){
+  .details{
+    margin-bottom:50px;
+  }
+}
+
+@media(max-width:1160px){
+  .details{
+    margin-top:0;
+  }
+}
+
+@media(max-width:1080px){
+  .prixContainer{
+    bottom:7vw;
+  }
+
+  .fichePack{
+    height:50vw;
+  }
+}
+
+
+
+
+
+@media(max-width:1024px) {    /*Je diminue toutes les tailles de polices*/
+    .nosPacks{
+        font-size:2rem;
+        top:45vw;
+    }
+
+    .text{
+      padding:0;
+    }
+
+    .sloggan2{
+        font-size:1rem;
+    }
+
+    .vraiNom{
+      font-size:1rem;
+    }
+  
+    .descrCourt{
+      font-size:0.8rem;
+      padding:0;
+    }
+
+    .intro,.newConcept{
+      font-size:0.8rem;
+    }
+
+    .prixContainer{
+      bottom:-3vw;
+      right:42vw;
+    }
+
+    .fichePack{
+      height:47vw;
+    }
+}
+
+@media(max-width:950px){
+  .details{
+    font-size:0.8rem;
+  }
+
+  .prix1{
+    font-size:1rem;
+  }
+
+  .prixContainer{
+    bottom:0;
+  }
+
+  .avion{
+    width:30px;
+    height:30px;
+  }
+
+  .descrCourt{
+    margin-bottom:0;
+  }
+}
+
+@media(max-width:880px){
+    .nosPacks{
+        font-size:1.8rem;
+    }
+
+    .sloggan2{
+        font-size:0.8rem;
+    }
+
+    .vraiNom{
+      font-size:0.8rem;
+      margin-bottom:2vw;
+    }
+  
+    .details{
+      font-size:0.6rem;
+      margin-bottom:5vw;
+    }
+  
+    .descrCourt{
+      font-size:0.6rem;
+      line-height:1.6;
+      margin-top:0;
+      margin-bottom:5vw;
+    }
+
+  .prixContainer{
+    bottom:2vw;
+  }
+  
+}
+
+@media(max-width:800px){
+  .details{
+    margin:0;
+  }
+}
+
+@media(max-width:780px){
+  .vraiNom{
+    margin-bottom:1vw;
+  }
+
+  .fichePack{
+    height:53vw;
+  }
+
+  
+}
+
+
+@media(max-width:680px){
+   .nosPacks{
+      font-size:1.4rem;
+    }
+
+    .nomGOT{
+      line-height: 1.5;
+    }
+
+    .vraiNom{
+      line-height: 1.2;
+    }
+  
+    .descrCourt{
+      font-size:0.5rem;
+    }
+
+    .intro{
+      font-size:0.6rem;
+      padding:30px;
+    }
+
+    .newConcept{
+      font-size:0.6rem;
+    }
+
+    .fichePack{
+      height:50vw;
+    }
+
+   
+
+}
+
+@media(max-width:660px){
+  .descrCourt{
+    margin:0;
+  }
+
+  .details{
+    margin-top:10px;
+  }
+
+  .prixContainer{
+    bottom:-2vw;
+  }
+}
+
+@media(max-width:660px){
+  .fichePack{
+   height:54vw;
+  }
+}
+
+@media(max-width:630px){
+  .fichePack{
+   height:58vw;
+  }
+}
+
+
+
+@media(max-width:600px){
+    .nosPacks{
+        font-size:1.2rem;
+        top:48vw;
+    }
+
+    .sloggan2{
+        font-size:0.7rem;
+      } 
+
+  .fichePack{
+    flex-wrap: wrap;
+    justify-content: center;
+    padding:15px;
+    height:fit-content;
+    width:85vw;
+    padding-top:0;
+  }
+
+  .prixContainer{
+    right:0;
+  }
+
+  .blocimg{
+    width:85vw;
+  }
+
+  .js-slider{
+    width:85vw;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .text{
+    padding:20px 20px;
+    margin-left:0;
+  }
+  .details{
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+}
+
+@media(max-width:510px){
+    .nosPacks{
+        font-size:0.8rem;
+        top:50vw;
+    }
+}
+
+
+
+@media(max-width:440px){
+    .nosPacks{
+        top:51vw;
+    }
+
+}
+
+@media(max-width:400px){
+    .nosPacks{
+        top:52vw;
+    }
+}
+
+
