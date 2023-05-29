@@ -66,6 +66,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     })
+
+    // Au chargement de la page, si aucun mode n'est défini dans le localStorage, on utilise le mode light par défaut
+    if (!localStorage.getItem("mode")) {
+    lightMode();
+    }
+
     //Au chargement de la page on met le bon mode
     if (localStorage.getItem("mode") == "light-mode") {
         lightMode();

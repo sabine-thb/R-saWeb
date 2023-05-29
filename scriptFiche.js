@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
     var popup = document.querySelector('.popup'); //popup pour le formulaire
     var retour =  document.querySelector('.retourDest');
+    var body=document.querySelector("#body");
 
     var largeurEcran = window.innerWidth;
 
@@ -36,10 +37,7 @@ document.addEventListener("DOMContentLoaded", function (){
           popup.classList.add('popup-visible');
           popup.classList.remove('popup-invisible');
           selecFooter.style.display="none";
-
-          if(largeurEcran<875){
-            document.querySelector("body").style.overflowY="hidden";
-          }
+          body.style.overflowY="hidden";
           
           
 

@@ -100,6 +100,7 @@
                                 <h2 class='recap'>Réservation : {$row["nomGOT"]}, {$row["nomReel"]} </h2>
                                 <input type='hidden' name='destination' value='{$row["nomReel"]}'>
                                 <input type='hidden' name='id_dest' value='{$row["id_dest"]}'>
+                                <input type='hidden' name='prixIndividuel' value='{$row["prix"]}'>
                                 <p>
                                     <label for='nom'>Nom* :</label>
                                     <input id='nom' name='nom' required>

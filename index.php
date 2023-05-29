@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleDark.css">
     <title>Gotatrip</title>
-    <link rel="shortcut icon" type="image/png" href="" />
+    <!-- <link rel="shortcut icon" type="image/png" href="icones/favicon.png" /> -->
     <!-- Ne pas oublier de mettre un favicon et de transformer le logo en favicon via un convertisseur -->
 </head>
 

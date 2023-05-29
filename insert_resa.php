@@ -72,6 +72,10 @@
         $date=$_GET["date"];
         $mail=$_GET["mail"];
 
+        $prixIndividuel=$_GET["prixIndividuel"];
+
+        $total=$nombreBillets*$prixIndividuel;
+
         
 
         $requete1="INSERT INTO clients (nom,prenom,mail) VALUES ('$nom','$prenom','$mail')";
@@ -82,7 +86,11 @@
 
 
 
-        $message="blabla";
+        $message="Merci pour votre commande chez Gotatrip !
+                 Votre avion partira le $date pour $destination.
+                 Quantité de billets : $nombreBillets.
+                 Total : $total €";
+                 
         $to=$mail;
         $subject="Votre réservation chez Gotatrip";
 

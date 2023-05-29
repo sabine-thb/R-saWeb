@@ -1,6 +1,6 @@
 
 .img-entete-ensavplus{
-    background-image:url(./images/vrac/enSavoirPlus.jpg);
+    background-image:url(./images/enTetes/enSavoirPlus.jpg);
     background-position: top;
     height:45vw; /*Si je mets une plus élevée que celle-là, alors barre de scroll horizontale*/
     background-size:cover;
@@ -148,7 +148,7 @@
         font-size:1rem;
     }
 
-    .descr, .etape, .txt{
+    .descr, .etape, .txt, .mentionsLegales{
         font-size:0.8rem;
     }
 
@@ -167,7 +167,7 @@
         font-size:0.8rem;
     }
 
-    .descr, .etape, .txt{
+    .descr, .etape, .txt, .mentionsLegales{
         font-size:0.6rem;
     }
 
@@ -195,7 +195,7 @@
         top:47vw;
     }
 
-    .descr, .etape, .txt{
+    .descr, .etape, .txt, .mentionsLegales{
         font-size:0.5rem;
     }
 
