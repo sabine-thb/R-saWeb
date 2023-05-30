@@ -7,15 +7,14 @@
     <link rel="stylesheet" href="styleConfirm.css">
     <link rel="stylesheet" href="styleDark.css">
     <title>Gotatrip</title>
-    <link rel="shortcut icon" type="image/png" href="" />
-    <!-- Ne pas oublier de mettre un favicon et de transformer le logo en favicon via un convertisseur -->
+    <link rel="shortcut icon" type="image/png" href="icones/favicon.png" />
 </head>
 
 <body id="body" class="light-mode">
     <header>
     <nav class="light-mode" id="nav">
             <a href="index.php" class="lien light-mode" id="accueil">
-                <img src="./icones/trone.svg" class="logo" alt="accueil">
+                <img src="./icones/trone.png" class="logo" alt="accueil">
                 <h1 class="titreSite">Gotatrip</h1>
             </a>
             <ul class="menu">
@@ -37,7 +36,7 @@
                             alt="mode sombre"></button>
                 </li>
             </ul>
-            <ul class="menuBurger">
+            <ul class="menuBurger light-mode">
                 <li>
                     <a href="./destinations.php" class="lien light-mode">Nos destinations</a>
                 </li>

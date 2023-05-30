@@ -8,13 +8,14 @@
     <title>Gotatrip : Nos packs de voyage</title>
     <link rel="stylesheet" href="stylePacks.css">
     <link rel="stylesheet" href="styleDark.css">
+    <link rel="shortcut icon" type="image/png" href="icones/favicon.png" />
 </head>
 
 <body id="body" class="light-mode">
     <header>
     <nav class="light-mode" id="nav">
             <a href="index.php" class="lien light-mode" id="accueil">
-                <img src="./icones/trone.svg" class="logo" alt="accueil">
+                <img src="./icones/trone.png" class="logo" alt="accueil">
                 <h1 class="titreSite">Gotatrip</h1>
             </a>
             <ul class="menu">
@@ -36,7 +37,7 @@
                             alt="mode sombre"></button>
                 </li>
             </ul>
-            <ul class="menuBurger">
+            <ul class="menuBurger light-mode">
                 <li>
                     <a href="./destinations.php" class="lien light-mode">Nos destinations</a>
                 </li>
@@ -118,7 +119,7 @@
     <footer class="fondViolet light-mode">
         <div class="footerPartGauche">
             <div class="footerContainer1">
-                <img src="./icones/trone.svg" alt="" class="footerTrone">
+                <img src="./icones/trone.png" alt="" class="footerTrone">
                 <h1 class="titreFooter ecritureBeige light-mode">Gotatrip</h1>
             </div>
             <p class="footerDescription">Gotatrip est un site qui vous permet de réserver des billets d’avion pour vous envoler vers les lieux de tournage de la série culte Game Of Thrones. Vous pourrez découvrir certains paysages extraordinaires d’Essos ou de Westeros après avoir choisi la destination qui vous fait le plus rêver.</p>

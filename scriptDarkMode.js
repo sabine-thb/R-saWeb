@@ -10,14 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
     var largeur = window.innerWidth;  /*Test qui marche comme un media query mais en js*/
 
     function darkMode() {
-        const elements = document.querySelectorAll('body, a, #button, #nav, .lien, .fondViolet,.ecritureBlanche, .ecritureBeige, .backgroundFiche, .arrowMode, .popup, .menuBurger');
+        const elements = document.querySelectorAll('body, a, #button, #nav, .lien, .fondViolet,.ecritureBlanche, .ecritureBeige, .backgroundFiche, .arrowMode, .popup, .menuBurger, .nomGOT');
         elements.forEach(element => {
             element.classList.add('dark-mode');
             element.classList.remove('light-mode')
 
         });
         selecMoon.src = "icones/moonBlack.svg"
-        selecLogo.src="icones/trone2.svg"
+        selecLogo.src="icones/trone2.png"
         selecBurger.src="icones/menuWhiteBurger.svg"
         localStorage.setItem("mode", 'dark-mode');
         console.log(localStorage.getItem("mode"))
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     function lightMode() {
-        const elements = document.querySelectorAll('body, a, #button, #nav, .lien, .fondViolet,.ecritureBlanche, .ecritureBeige, .backgroundFiche, .arrowMode, .popup, .menuBurger');
+        const elements = document.querySelectorAll('body, a, #button, #nav, .lien, .fondViolet,.ecritureBlanche, .ecritureBeige, .backgroundFiche, .arrowMode, .popup, .menuBurger, .nomGOT');
         elements.forEach(element => {
             element.classList.add('light-mode');
             element.classList.remove('dark-mode')
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         selecMoon.src = "icones/moonWhite.svg"
-        selecLogo.src="icones/trone.svg"
+        selecLogo.src="icones/trone.png"
         selecBurger.src="icones/menuBlackBurger.svg"
         localStorage.setItem("mode", 'light-mode')
         console.log(localStorage.getItem("mode"))

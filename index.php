@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleDark.css">
     <title>Gotatrip</title>
-    <!-- <link rel="shortcut icon" type="image/png" href="icones/favicon.png" /> -->
-    <!-- Ne pas oublier de mettre un favicon et de transformer le logo en favicon via un convertisseur -->
+    <link rel="shortcut icon" type="image/png" href="icones/favicon.png" />
 </head>
 
 <body id="body" class="light-mode">
     <header>
         <nav class="light-mode" id="nav">
             <a href="index.php" class="lien light-mode" id="accueil">
-                <img src="./icones/trone.svg" class="logo" alt="accueil">
+                <img src="./icones/trone.png" class="logo" alt="accueil">
                 <h1 class="titreSite">Gotatrip</h1>
             </a>
             <ul class="menu">
@@ -38,7 +37,7 @@
                             alt="mode sombre"></button>
                 </li>
             </ul>
-            <ul class="menuBurger">
+            <ul class="menuBurger light-mode">
                 <li>
                     <a href="./destinations.php" class="lien light-mode">Nos destinations</a>
                 </li>
@@ -111,124 +110,119 @@
             $stmt=$db->query($requete);
             $result=$stmt -> fetchall(PDO::FETCH_ASSOC); //Je dis de récupérer les résultats sous forme de tableau associatif ac le FETCH_ASSOC
             foreach ($result as $row){
-                echo "<div class='miniFicheDest backgroundFiche light-mode'>
-                            <a href='{$row["id_dest"]}.php'class='lienImg'>
+                echo "<a href='{$row["id_dest"]}.php'class='lienImg'>
+                            <div class='miniFicheDest backgroundFiche light-mode'>
                                  <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
-                            </a>
-                            <div class='text'>
-                                <h2 class='nomGOT'>{$row["nomGOT"]}</h2>
-                                <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
-                                <a href='{$row["id_dest"]}.php'class='enSavPlus light-mode '>En savoir plus sur le lieu de séjour</a>
+                                <div class='text'>
+                                    <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
+                                    <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
+                                </div>
+                                <div class='prixContainer'>
+                                    <img src='./icones/avionBlack.svg' class='avion' alt=''>
+                                    <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
+                                </div>
                             </div>
-                            <div class='prixContainer'>
-                                <img src='./icones/avionBlack.svg' class='avion' alt=''>
-                                <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
-                            </div>
-                        </div>";
-                    }
+                        </a>";
+            }
 
             
             $requete="SELECT * FROM destination WHERE id_dest=9 OR id_dest=1 ORDER BY id_dest DESC "; 
             $stmt=$db->query($requete);
             $result=$stmt -> fetchall(PDO::FETCH_ASSOC); //Je dis de récupérer les résultats sous forme de tableau associatif ac le FETCH_ASSOC
             foreach ($result as $row){
-                echo "<div class='miniFicheDest backgroundFiche light-mode'>
-                            <a href='{$row["id_dest"]}.php'class='lienImg'>
+                echo "<a href='{$row["id_dest"]}.php'class='lienImg'>
+                            <div class='miniFicheDest backgroundFiche light-mode'>
                                  <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
-                            </a>
-                            <div class='text'>
-                                <h2 class='nomGOT'>{$row["nomGOT"]}</h2>
-                                <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
-                                <a href='{$row["id_dest"]}.php'class='enSavPlus light-mode '>En savoir plus sur le lieu de séjour</a>
+                                <div class='text'>
+                                    <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
+                                    <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
+                                </div>
+                                <div class='prixContainer'>
+                                    <img src='./icones/avionBlack.svg' class='avion' alt=''>
+                                    <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
+                                </div>
                             </div>
-                            <div class='prixContainer'>
-                                <img src='./icones/avionBlack.svg' class='avion' alt=''>
-                                <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
-                            </div>
-                        </div>";
-                    }
+                        </a>";
+            }
 
             
             $requete="SELECT * FROM destination WHERE id_dest=2 OR id_dest=6 OR id_dest=8 OR id_dest=9 OR id_dest=10 OR id_dest=1 ORDER BY ordre_insertion" ;
             $stmt=$db->query($requete);
             $result=$stmt -> fetchall(PDO::FETCH_ASSOC); //Je dis de récupérer les résultats sous forme de tableau associatif ac le FETCH_ASSOC
             foreach ($result as $row){
-                echo "<div class='miniFicheDest reel backgroundFiche light-mode'>
-                            <a href='{$row["id_dest"]}.php'class='lienImg'>
-                                 <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
-                            </a>
-                            <div class='text'>
-                                <h2 class='nomGOT'>{$row["nomGOT"]}</h2>
-                                <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
-                                <a href='{$row["id_dest"]}.php'class='enSavPlus light-mode '>En savoir plus sur le lieu de séjour</a>
-                            </div>
-                            <div class='prixContainer'>
-                                <img src='./icones/avionBlack.svg' class='avion' alt=''>
-                                <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
-                            </div>
-                        </div>";
-                    }
+                echo "<a href='{$row["id_dest"]}.php'class='lienImg'>
+                <div class='miniFicheDest backgroundFiche light-mode'>
+                     <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
+                    <div class='text'>
+                        <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
+                        <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
+                    </div>
+                    <div class='prixContainer'>
+                        <img src='./icones/avionBlack.svg' class='avion' alt=''>
+                        <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
+                    </div>
+                </div>
+            </a>";
+            }
            
             $requete="SELECT * FROM destination WHERE id_dest=2 OR id_dest=6 "; //Je mets le second clone de mon slider infini
             $stmt=$db->query($requete);
             $result=$stmt -> fetchall(PDO::FETCH_ASSOC); //Je dis de récupérer les résultats sous forme de tableau associatif ac le FETCH_ASSOC
             foreach ($result as $row){
-                echo "<div class='miniFicheDest backgroundFiche light-mode'>
-                            <a href='{$row["id_dest"]}.php'class='lienImg'>
+                echo "<a href='{$row["id_dest"]}.php'class='lienImg'>
+                            <div class='miniFicheDest backgroundFiche light-mode'>
                                  <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
-                            </a>
-                            <div class='text'>
-                                <h2 class='nomGOT'>{$row["nomGOT"]}</h2>
-                                <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
-                                <a href='{$row["id_dest"]}.php'class='enSavPlus light-mode '>En savoir plus sur le lieu de séjour</a>
+                                <div class='text'>
+                                    <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
+                                    <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
+                                </div>
+                                <div class='prixContainer'>
+                                    <img src='./icones/avionBlack.svg' class='avion' alt=''>
+                                    <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
+                                </div>
                             </div>
-                            <div class='prixContainer'>
-                                <img src='./icones/avionBlack.svg' class='avion' alt=''>
-                                <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
-                            </div>
-                        </div>";
-                    }
+                        </a>";
+            }
             
             $requete="SELECT * FROM destination WHERE id_dest=9 "; //Je mets le second clone de mon slider infini
             $stmt=$db->query($requete);
             $result=$stmt -> fetchall(PDO::FETCH_ASSOC); //Je dis de récupérer les résultats sous forme de tableau associatif ac le FETCH_ASSOC
             foreach ($result as $row){
-                echo "<div class='miniFicheDest backgroundFiche light-mode'>
-                            <a href='{$row["id_dest"]}.php'class='lienImg'>
-                                 <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
-                            </a>
-                            <div class='text'>
-                                <h2 class='nomGOT'>{$row["nomGOT"]}</h2>
-                                <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
-                                <a href='{$row["id_dest"]}.php'class='enSavPlus light-mode '>En savoir plus sur le lieu de séjour</a>
-                            </div>
-                            <div class='prixContainer'>
-                                <img src='./icones/avionBlack.svg' class='avion' alt=''>
-                                <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
-                            </div>
-                        </div>";
-                    }
+                echo "<a href='{$row["id_dest"]}.php'class='lienImg'>
+                <div class='miniFicheDest backgroundFiche light-mode'>
+                     <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
+                    <div class='text'>
+                        <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
+                        <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
+                    </div>
+                    <div class='prixContainer'>
+                        <img src='./icones/avionBlack.svg' class='avion' alt=''>
+                        <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
+                    </div>
+                </div>
+            </a>";
+            }
             
             $requete="SELECT * FROM destination WHERE id_dest=9 "; //Je mets le second clone de mon slider infini
             $stmt=$db->query($requete);
             $result=$stmt -> fetchall(PDO::FETCH_ASSOC); //Je dis de récupérer les résultats sous forme de tableau associatif ac le FETCH_ASSOC
             foreach ($result as $row){
-                echo "<div class='miniFicheDest backgroundFiche light-mode'>
-                            <a href='{$row["id_dest"]}.php'class='lienImg'>
-                                 <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
-                            </a>
-                            <div class='text'>
-                                <h2 class='nomGOT'>{$row["nomGOT"]}</h2>
-                                <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
-                                <a href='{$row["id_dest"]}.php'class='enSavPlus light-mode '>En savoir plus sur le lieu de séjour</a>
-                            </div>
-                            <div class='prixContainer'>
-                                <img src='./icones/avionBlack.svg' class='avion' alt=''>
-                                <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
-                            </div>
-                        </div>";
-                    }
-                ?>
+                echo "<a href='{$row["id_dest"]}.php'class='lienImg'>
+                <div class='miniFicheDest backgroundFiche light-mode'>
+                     <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
+                    <div class='text'>
+                        <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
+                        <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
+                    </div>
+                    <div class='prixContainer'>
+                        <img src='./icones/avionBlack.svg' class='avion' alt=''>
+                        <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
+                    </div>
+                </div>
+            </a>";
+            }
+
+        ?>
             </div>
         </div>
         <span class='arrowMode droite light-mode'></span>
@@ -271,7 +265,7 @@
     <footer class="fondViolet light-mode">
         <div class="footerPartGauche">
             <div class="footerContainer1">
-                <img src="./icones/trone.svg" alt="" class="footerTrone">
+                <img src="./icones/trone.png" alt="" class="footerTrone">
                 <h1 class="titreFooter ecritureBeige light-mode">Gotatrip</h1>
             </div>
             <p class="footerDescription">Gotatrip est un site qui vous permet de réserver des billets d’avion pour vous envoler vers les lieux de tournage de la série culte Game Of Thrones. Vous pourrez découvrir certains paysages extraordinaires d’Essos ou de Westeros après avoir choisi la destination qui vous fait le plus rêver.</p>
