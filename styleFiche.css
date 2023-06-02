@@ -6,7 +6,7 @@ main{
     width: 90vw;
     display: flex;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 200px;
 }
 
 .photos {
@@ -70,6 +70,7 @@ main{
 .reservation {
     display: flex;
     justify-content: flex-end;
+    align-items:flex-start;
     margin-right: 6vw;
     gap: 100px;
     position: relative;
@@ -96,17 +97,14 @@ main{
 }
 
 .boutonReserve {
-    font-family:'Kufam', sans-serif;
     font-size: 1.5vw;
     font-weight: 500;
     color: white;
     background-color: #515667;
-    padding-right: 15px;
-    padding-left:15px;
-    border-radius: 30px;
-    cursor: pointer;
     transition: all 0.3s ease-in-out;
-    border:none;
+    padding:10px;
+    text-decoration:none;
+    border-radius:30px;
 
 }
 
@@ -137,150 +135,11 @@ main{
     font-weight:800;
 }
 
-
-
-
-
-
-/*Je mets en place mon popup du formulaire*/
-
-.popup-invisible {
-    display: none;
-}
-
-.popup-visible {
-    display: block;
-
-}
-
-
-.popup {
-    z-index: 200;
-    margin-top: 120px;
-    position: fixed;
-    left: 0px;
-    right: 0px;
-    top: 0;
-    bottom: 0;
-    /*Je mets un padding left pour égaliser car le contour est inégal sans cela*/
-    background-color: #fafbfc;
-    width: 100vw;
-    transition: all 0.5s ease-in-out;
-    background-size: cover;
-    background-position: bottom;
-
-
-}
-
-.retourContainer {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 100px;
-    margin-top: 30px;
-}
-
-.retourDest {
-    color: #010b12;
-    text-decoration: none;
-    background-color: #fafbfc;
-    border-radius: 20px;
-    padding: 10px;
-    transition: all 0.5s ease-in-out;
-}
-
-.retourDest:hover {
-    background-color: #010b12;
-    color: #fafbfc;
-}
-
-.formContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-
-form { 
-    padding: 20px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    backdrop-filter: blur(60px);
-}
-
-p {
-    margin: 5px;
-}
-
-input {
-    font-size: 1.2rem;
-}
-
-label {
-    font-size: 1.2rem;
-    color: #fafbfc;
-}
-
-.champsObligatoires {
-    margin-left: 250px;
-    color: #fafbfc;
-}
-
-.total {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #010b12;
-}
-
-.recap {
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-    color: #010b12;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.reserve {
-    border-radius: 20px;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    margin: auto;
-
-}
-
-.reserve:hover {
-    background-color: #010b12;
-    color: #fafbfc;
-}
-
-.increment,
-.decrement {
-    width: 30px;
-    height: 30px;
-    font-size: 1.2rem;
-    border-radius: 20px;
-    border: none;
-    margin: auto;
-    background-color: #763535;
-    color: white;
-    cursor: pointer;
-}
-
-.footerPopup {
-    bottom: 0;
-    width: 100vw;
-    position: absolute;
-}
-
-
 /*PLACE AUX MEDIAS QUERIES*/
 
-@media(max-width:1024px) {
-    .popup {
-        margin-top: 80px;
+@media(max-width:1024px){
+    .ficheDest{
+        margin-top:150px;
     }
 }
 
@@ -358,34 +217,6 @@ label {
 
 
 @media(max-width:600px) {
-    .recap,.total{
-        font-size:1rem;
-    }
-
-    .retourContainer{
-        margin-right:30px;
-        margin-top:30px;
-    }
-
-    .retourDest{
-        font-size:0.8rem;
-    }
-
-    label, input{
-        font-size:0.8rem;
-    }
-
-    .champsObligatoires{
-        font-size:0.8rem;
-        margin-left:100px;
-    }
-
-    .increment,.decrement{
-        font-size:0.8rem;
-        width:20px;
-        height:20px;
- 
-    }
     /*A partir d'une certaine largeur, j'évite les polices en vw car la taille devient trop ridicule avec la largeur d'écran*/
     .reservation {
         margin-top: 0;

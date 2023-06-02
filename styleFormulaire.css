@@ -1,0 +1,162 @@
+.retourContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
+    z-index:1000;
+    position:relative;
+    top:20px;
+
+}
+
+.retourDest {
+    color: #010b12;
+    text-decoration: none;
+    background-color: #fafbfc;
+    border-radius: 20px;
+    padding: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.retourDest:hover {
+    background-color: #010b12;
+    color: #fafbfc;
+}
+
+.formContainer {
+    position:fixed;
+    bottom:0;
+    top:90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    transition: all 0.5s ease-in-out;
+    background-size: cover;
+    background-position: bottom;
+}
+
+form { 
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(60px);
+}
+
+p {
+    margin: 5px;
+}
+
+input {
+    font-size: 1.2rem;
+}
+
+label {
+    font-size: 1.2rem;
+    color: #fafbfc;
+}
+
+.champsObligatoires {
+    margin-left: 250px;
+    color: #fafbfc;
+}
+
+.total {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #010b12;
+}
+
+.recap {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #010b12;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.reserve {
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    margin: auto;
+
+}
+
+.reserve:hover {
+    background-color: #010b12;
+    color: #fafbfc;
+}
+
+.increment,
+.decrement {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    border: none;
+    margin: auto;
+    background-color: #763535;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/*PLACE AUX MEDIA QUERIES*/
+
+
+
+    /*Je gère mtn les textes dont j'augmente la police puisque je mets un flex-wrap*/
+@media(max-width:1024px){
+    .formContainer{
+        top:50px;
+    }
+
+    .retourContainer{
+        margin-right:30px;
+    }
+}
+
+
+@media(max-width:600px) {
+    .recap,.total{
+        font-size:1rem;
+    }
+
+    .retourContainer{
+        margin-right:30px;
+        margin-top:30px;
+        top:0;
+    }
+
+    .retourDest{
+        font-size:0.8rem;
+    }
+
+    label, input{
+        font-size:0.8rem;
+    }
+
+    .champsObligatoires{
+        font-size:0.8rem;
+        margin-left:100px;
+    }
+
+    .increment,.decrement{
+        font-size:0.8rem;
+        width:20px;
+        height:20px;
+ 
+    }
+    /*A partir d'une certaine largeur, j'évite les polices en vw car la taille devient trop ridicule avec la largeur d'écran*/
+    .reservation {
+        margin-top: 0;
+    }
+
+
+}
+

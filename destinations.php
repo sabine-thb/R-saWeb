@@ -12,6 +12,7 @@
 <body id="body" class="light-mode">
     <header>
     <nav class="light-mode" id="nav">
+        <a href=#destination class='skip-link'>Aller au contenu</a>
             <a href="index.php" class="lien light-mode" id="accueil">
                 <img src="./icones/trone.png" class="logo" alt="accueil">
                 <h1 class="titreSite">Gotatrip</h1>
@@ -27,12 +28,14 @@
                     <a href="./enSavoirPlus.php" class="lien light-mode">En savoir plus</a>
                 </li>
                 <li class="menuPrincipal">
-                    <img src="./icones/menuBlackBurger" class="burger light-mode" alt="menu">
+                    <button type="button" name="menuBurger" class="burgerButton light-mode">
+                        <img src="./icones/menuBlackBurger" class="burger light-mode" alt="menu">
+                    </button>
                 </li>
                 <li>
-                    <button type="button" name="dark_light" class="mode light-mode" id="button"
-                        title="Toggle dark/light mode"><img src="./icones/moonWhite.svg" class="moon"
-                            alt="mode sombre"></button>
+                    <button type="button" name="dark_light" class="mode light-mode" id="button" title="Toggle dark/light mode">
+                        <img src="./icones/moonWhite.svg" class="moon" alt="mode sombre">
+                    </button>
                 </li>
             </ul>
             <ul class="menuBurger light-mode">
@@ -44,12 +47,7 @@
                 </li>
                 <li>
                     <a href="./enSavoirPlus.php" class="lien light-mode">En savoir plus</a>
-                </li>
-                <li>
-                    <button type="button" name="dark_light" class="mode light-mode" id="button"
-                        title="Toggle dark/light mode"><img src="./icones/moonWhite.svg" class="moon"
-                            alt="mode sombre"></button>
-                </li>  
+                </li> 
             </ul>
         </nav>
     </header>
@@ -57,7 +55,7 @@
         <div class="img-entete-dest">
             <h2 class="nosDest">Nos destinations.</h2>
         </div>
-        <h2 class="citationDestinations fondViolet light-mode">Prêts à vivre cette histoire vous même ?</h2>
+        <h2 class="citationDestinations fondViolet light-mode" id='destination'>Prêts à vivre cette histoire vous même ?</h2>
 
         <div class="toutesDest">
         <?php
@@ -107,7 +105,9 @@
                             </div>
                             <div class='js-navigation'>
                                 <button class='js-btn-decale-gauche'>
-                                    <span class='arrow' id='f{$row["id_dest"]}'></span>
+                                    <span class='arrow' id='f{$row["id_dest"]}'>
+                                        <span class='sr-only'>Image suivante</span></span>
+                                    </span>
                                 </button>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                             <h3 class='nomGOT'>{$row["nomGOT"]}</h3>
                             <h3 class='vraiNom ecritureBeige dark-mode'>{$row["nomReel"]}, {$row["pays"]}</h3>
                             <p class='descrCourt'>{$row["descriptifCourt"]}</p>
-                            <a href='{$row["id_dest"]}.php'class='enSavPlus dark-mode '>En savoir plus sur le lieu de séjour</a>
+                            <a href='ficheDest.php?dest={$row["id_dest"]}'class='enSavPlus dark-mode '>En savoir plus sur le lieu de séjour</a>
                             <div class='prixContainer'>
                                 <img src='./icones/avionBlack.svg' class='avion' alt=''>
                                 <h2 class='prix1 ecritureBeige dark-mode'>{$row["prix"]}€</h2>

@@ -28,12 +28,14 @@
                     <a href="./enSavoirPlus.php" class="lien light-mode">En savoir plus</a>
                 </li>
                 <li class="menuPrincipal">
-                    <img src="./icones/menuBlackBurger" class="burger light-mode" alt="menu">
+                    <button type="button" name="menuBurger" class="burgerButton light-mode">
+                        <img src="./icones/menuBlackBurger" class="burger light-mode" alt="menu">
+                    </button>
                 </li>
                 <li>
-                    <button type="button" name="dark_light" class="mode light-mode" id="button"
-                        title="Toggle dark/light mode"><img src="./icones/moonWhite.svg" class="moon"
-                            alt="mode sombre"></button>
+                    <button type="button" name="dark_light" class="mode light-mode" id="button" title="Toggle dark/light mode">
+                        <img src="./icones/moonWhite.svg" class="moon" alt="mode sombre">
+                    </button>
                 </li>
             </ul>
             <ul class="menuBurger light-mode">
@@ -45,12 +47,7 @@
                 </li>
                 <li>
                     <a href="./enSavoirPlus.php" class="lien light-mode">En savoir plus</a>
-                </li>
-                <li>
-                    <button type="button" name="dark_light" class="mode light-mode" id="button"
-                        title="Toggle dark/light mode"><img src="./icones/moonWhite.svg" class="moon"
-                            alt="mode sombre"></button>
-                </li>  
+                </li> 
             </ul>
         </nav>
     </header>

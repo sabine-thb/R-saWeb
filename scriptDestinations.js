@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function retourDebut(element) {
         element.style.left = "0vw";
-        
         element.dataset.position = element.dataset.minPosition;
 
     }
@@ -55,12 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
         decaleGauche(jsPhotosElement);
         })
     })
-
-
-    // setInterval(decaleGauche, 2000);
-
-
-    //setInterval(decaleDroite, 2000) Si je veux que mon slider aille à droite tout seul, je met ce setInterval et j'initialise mon left à -1000
 
 
    

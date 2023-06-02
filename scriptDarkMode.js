@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var largeur = window.innerWidth;  /*Test qui marche comme un media query mais en js*/
 
     function darkMode() {
-        const elements = document.querySelectorAll('body, a, #button, #nav, .lien, .fondViolet,.ecritureBlanche, .ecritureBeige, .backgroundFiche, .arrowMode, .popup, .menuBurger, .nomGOT');
+        const elements = document.querySelectorAll('body, a, #button, #nav, .lien, .fondViolet,.ecritureBlanche, .ecritureBeige, .backgroundFiche, .arrowMode, .popup, .menuBurger, .nomGOT, .burgerButton');
         elements.forEach(element => {
             element.classList.add('dark-mode');
             element.classList.remove('light-mode')
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     function lightMode() {
-        const elements = document.querySelectorAll('body, a, #button, #nav, .lien, .fondViolet,.ecritureBlanche, .ecritureBeige, .backgroundFiche, .arrowMode, .popup, .menuBurger, .nomGOT');
+        const elements = document.querySelectorAll('body, a, #button, #nav, .lien, .fondViolet,.ecritureBlanche, .ecritureBeige, .backgroundFiche, .arrowMode, .popup, .menuBurger, .nomGOT, .burgerButton');
         elements.forEach(element => {
             element.classList.add('light-mode');
             element.classList.remove('dark-mode')

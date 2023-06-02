@@ -14,6 +14,7 @@
 <body id="body" class="light-mode">
     <header>
     <nav class="light-mode" id="nav">
+        <a href=#content class='skip-link'>Aller au contenu</a>
             <a href="index.php" class="lien light-mode" id="accueil">
                 <img src="./icones/trone.png" class="logo" alt="accueil">
                 <h1 class="titreSite">Gotatrip</h1>
@@ -29,12 +30,14 @@
                     <a href="./enSavoirPlus.php" class="lien light-mode">En savoir plus</a>
                 </li>
                 <li class="menuPrincipal">
-                    <img src="./icones/menuBlackBurger" class="burger light-mode" alt="menu">
+                    <button type="button" name="menuBurger" class="burgerButton light-mode">
+                        <img src="./icones/menuBlackBurger" class="burger light-mode" alt="menu">
+                    </button>
                 </li>
                 <li>
-                    <button type="button" name="dark_light" class="mode light-mode" id="button"
-                        title="Toggle dark/light mode"><img src="./icones/moonWhite.svg" class="moon"
-                            alt="mode sombre"></button>
+                    <button type="button" name="dark_light" class="mode light-mode" id="button" title="Toggle dark/light mode">
+                        <img src="./icones/moonWhite.svg" class="moon" alt="mode sombre">
+                    </button>
                 </li>
             </ul>
             <ul class="menuBurger light-mode">
@@ -47,11 +50,6 @@
                 <li>
                     <a href="./enSavoirPlus.php" class="lien light-mode">En savoir plus</a>
                 </li>
-                <li>
-                    <button type="button" name="dark_light" class="mode light-mode" id="button"
-                        title="Toggle dark/light mode"><img src="./icones/moonWhite.svg" class="moon"
-                            alt="mode sombre"></button>
-                </li>  
             </ul>
         </nav>
     </header>
@@ -61,7 +59,7 @@
             <h2 class="nosPacks">Nos packs de voyage.</h2>
         </div>
         <div class="introContainer backgroundFiche light-mode">
-            <p class="intro">Nos packs de voyage vous permettent de <span class="bold ecritureBeige light-mode">visiter plusieurs lieux de tournage en même temps.</span> Pour cela, nous prenons garde à ce que les lieux ne soient pas trop éloignés au niveau de leur localisation.
+            <p class="intro" id="content">Nos packs de voyage vous permettent de <span class="bold ecritureBeige light-mode">visiter plusieurs lieux de tournage en même temps.</span> Pour cela, nous prenons garde à ce que les lieux ne soient pas trop éloignés au niveau de leur localisation.
             Nous vous proposons alors un parcours adapté au pack choisi qui vous permettra, par l’intermédiaire de nos moyens de transport mis à disposition, d’aller d’une ville à l’autre afin de <span class="bold ecritureBeige light-mode">profiter un maximum des paysages inoubliables</span> que vous allez rencontrer.
             </p>
         </div>
@@ -99,7 +97,7 @@
                          <h1 class='pays ecritureBeige light-mode'>{$row["pays"]}</h1>
                          <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}</h2>
                          <p class='descrCourt'>{$row["descriptifCourt"]}</p>
-                         <a href='{$row["id_dest"]}.php' class='details light-mode'>Voir plus de détails sur le pack</a>
+                         <a href='fichePack.php?pack={$row["id_dest"]}' class='details light-mode'>Voir plus de détails sur le pack</a>
                          <div class='prixContainer'>
                              <img src='./icones/avionBlack.svg' class='avion' alt=''>
                              <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€/pers</h2>

@@ -14,6 +14,7 @@
 <body id="body" class="light-mode">
     <header>
         <nav class="light-mode" id="nav">
+            <a href=#search class='skip-link'>Aller au contenu</a>
             <a href="index.php" class="lien light-mode" id="accueil">
                 <img src="./icones/trone.png" class="logo" alt="accueil">
                 <h1 class="titreSite">Gotatrip</h1>
@@ -29,12 +30,14 @@
                     <a href="./enSavoirPlus.php" class="lien light-mode">En savoir plus</a>
                 </li>
                 <li class="menuPrincipal">
-                    <img src="./icones/menuBlackBurger" class="burger light-mode" alt="menu">
+                    <button type="button" name="menuBurger" class="burgerButton light-mode">
+                        <img src="./icones/menuBlackBurger" class="burger light-mode" alt="menu">
+                    </button>
                 </li>
                 <li>
-                    <button type="button" name="dark_light" class="mode light-mode" id="button"
-                        title="Toggle dark/light mode"><img src="./icones/moonWhite.svg" class="moon"
-                            alt="mode sombre"></button>
+                    <button type="button" name="dark_light" class="mode light-mode" id="button" title="Toggle dark/light mode">
+                        <img src="./icones/moonWhite.svg" class="moon" alt="mode sombre">
+                    </button>
                 </li>
             </ul>
             <ul class="menuBurger light-mode">
@@ -46,12 +49,7 @@
                 </li>
                 <li>
                     <a href="./enSavoirPlus.php" class="lien light-mode">En savoir plus</a>
-                </li>
-                <li>
-                    <button type="button" name="dark_light" class="mode light-mode" id="button"
-                        title="Toggle dark/light mode"><img src="./icones/moonWhite.svg" class="moon"
-                            alt="mode sombre"></button>
-                </li>  
+                </li> 
             </ul>
         </nav>
     </header>
@@ -81,6 +79,7 @@
     <form action="destinations.php" method="get" class="fondViolet">
         <div class="searchBar">
             <img src="./icones/loupeBlack.svg" alt="rechercher" class="loupe">
+            <label for="search" class="sr-only">Rechercher</label>
             <input class="search" type="text" id="search" name="search" placeholder="Rechercher une destination, un pays...">
         </div>  
         <div> 
@@ -110,7 +109,7 @@
             $stmt=$db->query($requete);
             $result=$stmt -> fetchall(PDO::FETCH_ASSOC); //Je dis de récupérer les résultats sous forme de tableau associatif ac le FETCH_ASSOC
             foreach ($result as $row){
-                echo "<a href='{$row["id_dest"]}.php'class='lienImg'>
+                echo "<a href='ficheDest.php?dest={$row["id_dest"]}'class='lienImg'>
                             <div class='miniFicheDest backgroundFiche light-mode'>
                                  <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
                                 <div class='text'>
@@ -130,7 +129,7 @@
             $stmt=$db->query($requete);
             $result=$stmt -> fetchall(PDO::FETCH_ASSOC); //Je dis de récupérer les résultats sous forme de tableau associatif ac le FETCH_ASSOC
             foreach ($result as $row){
-                echo "<a href='{$row["id_dest"]}.php'class='lienImg'>
+                echo "<a href='ficheDest.php?dest={$row["id_dest"]}'class='lienImg'>
                             <div class='miniFicheDest backgroundFiche light-mode'>
                                  <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
                                 <div class='text'>
@@ -150,7 +149,7 @@
             $stmt=$db->query($requete);
             $result=$stmt -> fetchall(PDO::FETCH_ASSOC); //Je dis de récupérer les résultats sous forme de tableau associatif ac le FETCH_ASSOC
             foreach ($result as $row){
-                echo "<a href='{$row["id_dest"]}.php'class='lienImg'>
+                echo "<a href='ficheDest.php?dest={$row["id_dest"]}'class='lienImg'>
                 <div class='miniFicheDest backgroundFiche light-mode'>
                      <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
                     <div class='text'>
@@ -169,7 +168,7 @@
             $stmt=$db->query($requete);
             $result=$stmt -> fetchall(PDO::FETCH_ASSOC); //Je dis de récupérer les résultats sous forme de tableau associatif ac le FETCH_ASSOC
             foreach ($result as $row){
-                echo "<a href='{$row["id_dest"]}.php'class='lienImg'>
+                echo "<a href='ficheDest.php?dest={$row["id_dest"]}' class='lienImg'>
                             <div class='miniFicheDest backgroundFiche light-mode'>
                                  <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
                                 <div class='text'>
@@ -188,7 +187,7 @@
             $stmt=$db->query($requete);
             $result=$stmt -> fetchall(PDO::FETCH_ASSOC); //Je dis de récupérer les résultats sous forme de tableau associatif ac le FETCH_ASSOC
             foreach ($result as $row){
-                echo "<a href='{$row["id_dest"]}.php'class='lienImg'>
+                echo "<a href='ficheDest.php?dest={$row["id_dest"]}' class='lienImg'>
                 <div class='miniFicheDest backgroundFiche light-mode'>
                      <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
                     <div class='text'>
@@ -207,7 +206,7 @@
             $stmt=$db->query($requete);
             $result=$stmt -> fetchall(PDO::FETCH_ASSOC); //Je dis de récupérer les résultats sous forme de tableau associatif ac le FETCH_ASSOC
             foreach ($result as $row){
-                echo "<a href='{$row["id_dest"]}.php'class='lienImg'>
+                echo "<a href='ficheDest.php?dest={$row["id_dest"]}' class='lienImg'>
                 <div class='miniFicheDest backgroundFiche light-mode'>
                      <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
                     <div class='text'>
@@ -243,7 +242,7 @@
         $stmt=$db->query($requete);
         $result=$stmt -> fetchall(PDO::FETCH_ASSOC); //Je dis de récupérer les résultats sous forme de tableau associatif ac le FETCH_ASSOC
         foreach ($result as $row){
-            echo "<a href='{$row["id_dest"]}.php' class='lienPacks'>   
+            echo "<a href='fichePack.php?pack={$row["id_dest"]}' class='lienPacks'>   
                      <div class='fichePack backgroundFiche light-mode zoom'>
                          <div class='imgContainer2'>
                          <div class='blocimg2' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>

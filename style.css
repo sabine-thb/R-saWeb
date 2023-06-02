@@ -8,6 +8,7 @@
     background-repeat: no-repeat;
     flex: none;
     background-position:center;
+    
 
 
     
@@ -31,6 +32,7 @@
     height:48vw; 
     width:auto;
     overflow: hidden;
+    margin-top:120px;
 
 }
 
@@ -504,6 +506,10 @@ select{
 
     .fichePack{
         height:38vw;
+    }
+
+    .js-slider{
+        margin-top:80px;
     }
 }
 

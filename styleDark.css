@@ -21,12 +21,15 @@
 body {
     transition: 0.5s ease-in-out;
     margin:0;
-    padding-top:120px; /*Je mets un padding-top égal à la hauteur de ma nav pour gérer le positionnement fixed de celle ci*/
     font-family: 'Kufam', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size:1rem;
     line-height: 1.6;
+}
+
+main{
+    margin-top:120px; /*  Je mets un margin-top égal à la hauteur de ma nav pour gérer le positionnement fixed de celle ci */
 }
 
 
@@ -48,6 +51,7 @@ nav{
     box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.08);
     -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.08);
     -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.08);
+    box-sizing:border-box
     
 }
 
@@ -133,6 +137,14 @@ li:nth-of-type(4){ /*Je mets mon burger invisible*/
     -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.08);
     
 }
+
+.burgerButton{
+    border:0;
+    background-color: #fafbfc;
+    transition:all 0.5s ease-in-out;
+}
+
+
 
 
 .mode {
@@ -298,15 +310,19 @@ ul .lien.dark-mode:hover {
 
 
 
-button.dark-mode {
+.mode.dark-mode {
     background-color: #fafbfc;
     color: #010b12;
 }
 
 
-button.light-mode {
+.mode.light-mode {
     background-color: #010b12;
     color: #fafbfc;
+}
+
+.burgerButton.dark-mode{
+    background-color: #010b12;
 }
 
 .fondViolet.dark-mode{
@@ -354,18 +370,48 @@ button.light-mode {
 }
 
 
+/*Je mets en place mes classes pour l'accessibilité*/
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important; 
+    border: 0 !important;
+}
 
 
+.skip-link {
+    background-color: #fff;
+    border: solid 3px #000;
+    color: #000;
+    padding: 0.4em 0.5em;
+    text-decoration: none;
+}
 
+.skip-link:not(:focus):not(:active) {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
 
-
-
-
-
-
-
-
-
+.skip-link:focus {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+}
 
 
 
@@ -406,8 +452,8 @@ button.light-mode {
         left:-30px;
     }
 
-    body{ /* Je diminue la hauteur de ma nav*/
-        padding-top:80px;
+    main{ /* Je diminue la hauteur de ma nav*/
+        margin-top:80px;
     }
 
     nav{
