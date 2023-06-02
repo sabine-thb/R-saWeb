@@ -104,7 +104,6 @@
   
   .descrCourt{
     max-width:1200px;
-    
   
   }
   
@@ -112,7 +111,6 @@
     align-self:flex-end;
     color:#010b12;
     margin-top:50px;
-    margin-bottom:160px;
     transition:all 0.3s ease-in-out;
   }
 
@@ -239,11 +237,6 @@
 
 /*PLACE AUX MEDIA QUERIES*/
 
-@media(max-width:1300px){
-  .details{
-    margin-bottom:50px;
-  }
-}
 
 @media(max-width:1160px){
   .details{
@@ -297,9 +290,6 @@
       right:42vw;
     }
 
-    .fichePack{
-      height:47vw;
-    }
 }
 
 @media(max-width:950px){
@@ -341,14 +331,14 @@
   
     .details{
       font-size:0.6rem;
-      margin-bottom:5vw;
+      margin-bottom:18px;
     }
   
     .descrCourt{
       font-size:0.6rem;
       line-height:1.6;
       margin-top:0;
-      margin-bottom:5vw;
+      margin-bottom:60px;;
     }
 
   .prixContainer{
@@ -357,22 +347,26 @@
   
 }
 
-@media(max-width:800px){
-  .details{
-    margin:0;
-  }
-}
+
 
 @media(max-width:780px){
   .vraiNom{
     margin-bottom:1vw;
   }
 
-  .fichePack{
-    height:53vw;
+  .descrCourt{
+    margin-bottom:30px;
   }
 
   
+}
+
+@media(max-width:720px){
+
+  .descrCourt{
+    margin-bottom:0;
+  }
+
 }
 
 
@@ -391,6 +385,7 @@
   
     .descrCourt{
       font-size:0.5rem;
+      margin-bottom:20px;
     }
 
     .intro{
@@ -402,9 +397,7 @@
       font-size:0.6rem;
     }
 
-    .fichePack{
-      height:50vw;
-    }
+
 
    
 
@@ -476,7 +469,7 @@
   }
   .details{
     margin-top:10px;
-    margin-bottom:10px;
+
   }
 }
 

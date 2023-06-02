@@ -85,7 +85,9 @@
                             </div>
                             <div class='js-navigation'>
                                 <button class='js-btn-decale-gauche'>
-                                    <span class='arrow' id='f{$row["id_dest"]}'></span>
+                                    <span class='arrow' id='f{$row["id_dest"]}'>
+                                        <span class='sr-only'>Image suivante</span>
+                                    </span>
                                 </button>
                             </div>
                         </div>
