@@ -103,7 +103,8 @@
                 <p>Ce site, fait dans le cadre d'un projet étudiant, ne permet pas de faire de vrais achats. Vos données rentrées dans le formulaire au moment de la réservation ne seront jamais transmises à des tiers ou commercialisées. Ces données sont conservées dans la base de données du site web, accessible uniquement par sa créatrice. Si vous avez une éventuelle demande concernant la suppression de vos données, vous pouvez vous adresser directement à l'adresse suivante : sabine.thibout@univ-eiffel.fr. 
                 </p>
                 <p>
-                    Toutes les images sont directement tirées de la série Game Of Thrones.
+                    Toutes les images de film sont directement tirées de la série Game Of Thrones.
+                    Tous droits réservés.
                 </p>
                 <p>
                     Il a été pensé que le prix d'un billet d'avion varie en fonction du lieu de départ. Cependant, l'objectif du projet était de créer un premier site de réservation  avec de nouveaux langages tels que le php ou le SQL, cet aspect du projet a été mis de côté.
