@@ -111,6 +111,7 @@
     align-self:flex-end;
     color:#010b12;
     margin-top:50px;
+    margin-bottom:130px;
     transition:all 0.3s ease-in-out;
   }
 
@@ -236,13 +237,21 @@
 
 
 /*PLACE AUX MEDIA QUERIES*/
-
-
-@media(max-width:1160px){
+@media(max-width:1300px){
   .details{
-    margin-top:0;
+    margin-bottom:80px;
   }
 }
+
+
+
+@media(max-width:1220px){
+  .details{
+    margin-top:0;
+    margin-bottom:0px;
+  }
+}
+
 
 @media(max-width:1080px){
   .prixContainer{
