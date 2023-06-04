@@ -23,5 +23,9 @@ CONCERNANT LE RESPONSIVE DE MON SITE :
 
 -Mon site est totalement responsive. Je vous invite donc à le tester sur votre téléphone mobile si vous le souhaitez.
 
+SOUCIS QUE J'AI PAS REUSSI A TRAITER :
+
+- le fait que lorsqu'on tabule on arrive sur les cartes cachées de mon carrousel infini 
+
 
 

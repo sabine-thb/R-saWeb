@@ -171,7 +171,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    var selecButton = document.querySelector('.mode');
 
     //J'active le carrousel au clic sur les flèches à droite et à gauche
 
@@ -185,57 +184,6 @@ document.addEventListener("DOMContentLoaded", function () {
     flecheDecaleDroite.addEventListener('click', function() {
     decaleDroite2();
     });
-
-    //Je mets en noir ou blanc les flèches de mon carrousel en fonction du mode de la page
-
-    function flecheDarkMode() {
-        localStorage.setItem("mode3", 'dark-mode');
-        flecheDecaleDroite.src = "icones/flecheDroiteWhite.svg"; 
-        flecheDecaleGauche.src = "icones/flecheGaucheWhite.svg"; 
-
-        console.log(localStorage.getItem("mode3"))
-
-    }
-
-    function flecheLightMode() {
-        localStorage.setItem("mode3", 'light-mode');
-        flecheDecaleDroite.src = "icones/flecheDroiteBlack.svg"; 
-        flecheDecaleGauche.src = "icones/flecheGaucheBlack.svg";
-
-        console.log(localStorage.getItem("mode3"))
-    }
-
-    selecButton.addEventListener('click', function () {
-
-        if (localStorage.getItem("mode3") == "light-mode") {
-            flecheDarkMode();
-        }
-        else{
-            flecheLightMode();
-        }
-
-        })
-    
-
-        //Au chargement de la page on met le bon mode
-    if (localStorage.getItem("mode3") == "light-mode") {
-        flecheLightMode();
-    }else{
-        flecheDarkMode();
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
