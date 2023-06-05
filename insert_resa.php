@@ -74,7 +74,7 @@
 
         
 
-        $requete1="INSERT INTO clients (nom,prenom,mail) VALUES ('$nom','$prenom','$mail')";
+        $requete1="INSERT INTO clients (nom, prenom, mail) VALUES ('$nom','$prenom','$mail')";
         $db->query($requete1);
 
         $requete2="INSERT INTO reservation (dateResa,quantité,prenom_ext,dest_ext) VALUES ('$date','$nombreBillets','$prenom','$destination')";
@@ -82,15 +82,30 @@
 
 
 
-        $message="Merci pour votre commande chez Gotatrip !
-                 Votre avion partira le $date pour $destination.
-                 Quantité de billets : $nombreBillets.
-                 Total : $total €";
+        //J'envoie un mail de confirmation à la personne qui réserve et à moi-même en tant que créatruce du site
+
+        $message="Merci $prenom pour ta commande chez Gotatrip !
+        Ton avion partira le $date pour $destination.
+        Quantité de billets : $nombreBillets.
+        Total : $total €";
+           
                  
         $to=$mail;
+
         $subject="Votre réservation chez Gotatrip";
 
+        $messageProprio="$prenom $nom a réservé $nombreBillets billet(s) pour $destination. Son avion partira le $date.
+        Il/elle en a eu pour $total €. ";
+
+        $mailProprio="sabine.thibout@edu.univ-eiffel.fr";
+
+        $subject2="Réservation Gotatrip";
+
         mail($to, $subject, $message);
+
+        mail($mailProprio, $subject2, $messageProprio);
+
+     
 
 
 
