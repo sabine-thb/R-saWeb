@@ -79,7 +79,7 @@ $result=$stmt-> fetchall(PDO::FETCH_ASSOC);
            </div>
     
     <div class='formContainer' style='background-image:url(images/{$row["id_dest"]}/2.jpg);''>
-                <form action='insert_resa.php' method='GET'>
+                <form action='insert_resa.php' id='reservationForm' method='GET'>
                     <h2 class='recap'>Réservation : {$row["nomGOT"]}, {$row["nomReel"]} </h2>
                     <input type='hidden' name='destination' value='{$row["nomReel"]}'>
                     <input type='hidden' name='id_dest' value='{$row["id_dest"]}'>

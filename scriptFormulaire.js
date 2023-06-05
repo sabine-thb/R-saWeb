@@ -39,5 +39,28 @@ document.addEventListener("DOMContentLoaded", function (){
     incrementer();
     decrementer();
 
+    //Je veux faire en sorte que je ne puisse pas réserver pour une date déjà passé
+    document.getElementById("reservationForm").addEventListener("submit", function(event) {
+      // Récupérer la date actuelle
+      var dateActuelle = new Date();
+    
+      // Récupérer la date sélectionnée par l'utilisateur à partir du formulaire
+      var dateSelectionnee = new Date(document.getElementById("date").value);
+    
+      // Comparer les dates (en utilisant la méthode getTime() pour comparer les timestamps)
+      if (dateSelectionnee.getTime() < dateActuelle.getTime()) {
+        alert("La date sélectionnée est déjà passée. Veuillez choisir une autre date.");
+        event.preventDefault(); // Empêcher l'envoi du formulaire
+      } else {
+        // La date est valide, vous pouvez autoriser l'envoi du formulaire
+        // ou effectuer d'autres actions de traitement ici
+      }
+    });
+    
+    
+
+
+  
+
 
 })

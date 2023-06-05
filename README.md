@@ -5,6 +5,7 @@ Voici le lien pour accéder à mon site en public :
 
 http://resaweb.thibout.butmmi.o2switch.site
 
+Ayant désinstallé XAMP, je vais vous expliquer comment installer le site sur un serveur local WAMP.
 Comment installer le site sur un serveur local WAMP ?
 
 Pour cela, lancer WAMPP sur votre ordinateur personnel.
