@@ -89,7 +89,7 @@
         Explorez des destinations incroyables aux quatre coins du globe, des falaises abruptes d’Irlande aux rues historiques de Dubrovnik, transformée en la ville royale de Port-Réal. Revivez les scènes emblématiques des Sept Royaumes en marchant sur les traces de vos personnages préférés. </p>
     </div>
 
-    <form action="destinations.php#erreur" method="get" >
+    <form action="destinations.php" method="get" >
         <div class="searchBar">
             <img src="./icones/loupeBlack.svg" alt="rechercher" class="loupe">
             <label for="search" class="sr-only">Rechercher</label>
