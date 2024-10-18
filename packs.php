@@ -58,13 +58,14 @@
             <div class="img-entete-packs"></div>
             <h2 class="nosPacks">Nos packs de voyage.</h2>
         </div>
-        <div class="introContainer backgroundFiche light-mode">
-            <p class="intro" id="content">Nos packs de voyage vous permettent de <span class="bold ecritureBeige light-mode">visiter plusieurs lieux de tournage en même temps.</span> Pour cela, nous prenons garde à ce que les lieux ne soient pas trop éloignés au niveau de leur localisation.
-            Nous vous proposons alors un parcours adapté au pack choisi qui vous permettra, par l’intermédiaire de nos moyens de transport mis à disposition, d’aller d’une ville à l’autre afin de <span class="bold ecritureBeige light-mode">profiter un maximum des paysages inoubliables</span> que vous allez rencontrer.
+        <div class="textPacks">
+            <h2 class="citationPacks  ecritureBeige light-mode " id='destination'>Un concept nouveau</h2>
+            <p class="descrPacks">Nos packs de voyage vous permettent de visiter plusieurs lieux de tournage en même temps. Pour cela, nous prenons garde à ce que les lieux ne soient pas trop éloignés au niveau de leur localisation.
+            Nous vous proposons alors un parcours adapté au pack choisi qui vous permettra, par l’intermédiaire de nos moyens de transport mis à disposition, d’aller d’une ville à l’autre afin de profiter un maximum des paysages inoubliables que vous allez rencontrer.
             </p>
         </div>
         
-        <p class="newConcept fondViolet light-mode">Ceci étant un nouveau concept sur notre site, nous avons uniquement 3 packs différents à vous proposer à l’heure actuelle :</p>
+        <!-- <p class="newConcept fondViolet light-mode">Ceci étant un nouveau concept sur notre site, nous avons uniquement 3 packs différents à vous proposer à l’heure actuelle :</p> -->
         
         <?php
         include("connexion.php");
@@ -73,37 +74,24 @@
         $result=$stmt -> fetchall(PDO::FETCH_ASSOC); //Je dis de récupérer les résultats sous forme de tableau associatif ac le FETCH_ASSOC
         foreach ($result as $row){
             echo "
-            <h1 class='nomGOT'>{$row["nomGOT"]}</h1>
-            <div class='fichePack backgroundFiche light-mode'>
-                        <div class='js-slider'>
-                            <div class='js-photos' data-position id='js-photos-{$row["id_dest"]}'>
-                                <div class='blocimg' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
-                                <div class='blocimg' style='background-image:url(./images/{$row["id_dest"]}/2.jpg);'></div>
-                                <div class='blocimg' style='background-image:url(./images/{$row["id_dest"]}/3.jpg);'></div>
-                                <div class='blocimg' style='background-image:url(./images/{$row["id_dest"]}/4.jpg);'></div>
-                                <div class='blocimg' style='background-image:url(./images/{$row["id_dest"]}/5.jpg);'></div>       
-                            </div>
-                            <div class='js-navigation'>
-                                <button class='js-btn-decale-gauche'>
-                                    <span class='arrow' id='f{$row["id_dest"]}'>
-                                        <span class='sr-only'>Image suivante</span>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                                         
+            <h2 class='nomGOT'>{$row["nomGOT"]}</h2>
+            <div class='fichePack'>
                         
-                     
+                            <div class='photos' data-position id='js-photos-{$row["id_dest"]}'>
+                                <div class='blocimg' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
+                                <div class='blocimg ' style='background-image:url(./images/{$row["id_dest"]}/2.jpg);'></div>
+                                <div class='blocimg blocimg{$row["id_dest"]}' style='background-image:url(./images/{$row["id_dest"]}/3.jpg);'></div>   
+                            </div>
+                
 
                      <div class='text'>
-                         <h1 class='pays ecritureBeige light-mode'>{$row["pays"]}</h1>
-                         <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}</h2>
-                         <p class='descrCourt'>{$row["descriptifCourt"]}</p>
-                         <a href='fichePack.php?pack={$row["id_dest"]}' class='details light-mode'>Voir plus de détails sur le pack</a>
-                         <div class='prixContainer'>
+                         <h2 class='pays ecritureBeige light-mode'>{$row["pays"]}</h2>
+                          <div class='prixContainer'>
                              <img src='./icones/avionBlack.svg' class='avion' alt=''>
-                             <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€/pers</h2>
+                             <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
                          </div>
+                         <a href='fichePack.php?pack={$row["id_dest"]}' class='button light-mode'>Voir plus</a>
+                        
                         
                      </div>
                   </div>";

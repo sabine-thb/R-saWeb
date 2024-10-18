@@ -74,43 +74,45 @@ $result=$stmt-> fetchall(PDO::FETCH_ASSOC);
     </header>
 
 <?php foreach ($result as $row){
-    echo " <div class='retourContainer'>
-                <a href='ficheDest.php?dest={$row["id_dest"]}' class='retourDest'>Retour à la fiche destination</a>
-           </div>
+    echo " 
+           
     
     <div class='formContainer' style='background-image:url(images/{$row["id_dest"]}/2.jpg);''>
+                
                 <form action='insert_resa.php' id='reservationForm' method='GET'>
-                    <h2 class='recap'>Réservation : {$row["nomGOT"]}, {$row["nomReel"]} </h2>
+                <a href='ficheDest.php?dest={$row["id_dest"]}' class='lienRetour'>
+                    <img src='' class='retour ' alt='retour'>
+                </a>
                     <input type='hidden' name='destination' value='{$row["nomReel"]}'>
                     <input type='hidden' name='id_dest' value='{$row["id_dest"]}'>
                     <input type='hidden' name='prixIndividuel' value='{$row["prix"]}'>
                     <p>
-                        <label for='nom'>Nom* :</label>
+                        <label for='nom'>Nom :</label>
                         <input id='nom' name='nom' required>
                     </p>
                     <p>
-                        <label for='prenom'>Prénom* :</label>
+                        <label for='prenom'>Prénom :</label>
                         <input id='prenom' name='prenom'required>
                     </p>
                     <p>
-                    <label for='nombre-billets'>Nombre de billets* :</label>
-                    <button class='decrement qteTotale' type='button'>-</button>
-                    <input id='nombre-billets' name='nombre-billets' type='number' min='1' max='10' required>
-                    <button class='increment qteTotale' type='button'>+</button>
+                    <label for='nombre-billets'>Nombre de billets :</label>
+                    <div class='qte'>
+                        <button class='decrement qteTotale' type='button'>-</button>
+                        <input id='nombre-billets' name='nombre-billets' type='number' min='1' max='10' required>
+                        <button class='increment qteTotale' type='button'>+</button>
+                    </div>
                     </p>
                     <p>
-                      <label for='date'>Date du vol* :</label>
+                      <label for='date'>Date du vol :</label>
                       <input id='date' name='date' type='date' required>
                     </p>
                     <p>
-                      <label for='mail'>Mail* :</label>
+                      <label for='mail'>Mail :</label>
                       <input id='mail' name='mail' type='email' required>
                     </p>
-                    <p class='champsObligatoires'>*Tous les champs sont obligatoires</p>
-                     
                     
                     <h3 class='total'>Total : <span id='prixTotal'></span></h3>
-                    <input type='submit' value='Je réserve' class='reserve' name='soumettre'> 
+                    <input type='submit' value='Je réserve' class='button' name='soumettre'> 
                    
                    <script>
                         var prixInitial ={$row["prix"]};
@@ -118,6 +120,34 @@ $result=$stmt-> fetchall(PDO::FETCH_ASSOC);
                 </form>
             </div>
         </div>";} ?>
+
+
+ <footer class="footer fondViolet light-mode">
+        <div class="footerPartGauche">
+            <div class="footerContainer1">
+                <img src="./icones/trone.png" alt="" class="footerTrone">
+                <h1 class="titreFooter ecritureBeige light-mode">Gotatrip</h1>
+            </div>
+            <p class="footerDescription">Gotatrip est un site qui vous permet de réserver des billets d’avion pour vous envoler vers les lieux de tournage de la série culte Game Of Thrones. Vous pourrez découvrir certains paysages extraordinaires d’Essos ou de Westeros après avoir choisi la destination qui vous fait le plus rêver.</p>
+        </div>
+
+        <div class="footerPartDroite">
+            <div class="plan">
+                <h2 class=" sTitreFooter ecritureBeige light-mode">Plan du site</h2>
+                <a href="destinations.php" class="lienFooter">Nos destinations</a>
+                <a href="packs.php" class="lienFooter">Nos packs</a>
+                <a href="enSavoirPlus.php" class="lienFooter">En savoir plus</a>
+            </div>
+
+            <div class="savPlus">
+                <h2 class=" sTitreFooter ecritureBeige light-mode">En savoir plus</h2>
+                <a href="enSavoirPlus.php#concept" class="lienFooter">Le concept</a>
+                <a href="enSavoirPlus.php#creatrice" class="lienFooter">La créatrice</a>
+                <a href="enSavoirPlus.php#mentionsLegales" class="lienFooter">Mentions légales</a>
+            </div>
+        </div>
+
+    </footer>
 
 
 </body>

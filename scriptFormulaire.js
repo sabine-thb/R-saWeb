@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function (){
     console.log(qté)
     var prixTotal = document.getElementById('prixTotal');
 
+    qté.value = 1;
+
     function PrixTotal() {
       var currentQte = qté.value; 
       console.log(currentQte);

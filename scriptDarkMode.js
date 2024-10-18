@@ -6,11 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var selecMoon = document.querySelector('.moon');
     var selecBurger = document.querySelector(".burger");
     var selecLogo=document.querySelector(".logo");
+    var selecArrow=document.querySelector(".retour");
     var selecAvion=document.querySelectorAll(".avion"); //Je sélectionne tous mes éléments avions
     var largeur = window.innerWidth;  /*Test qui marche comme un media query mais en js*/
 
     function darkMode() {
-        const elements = document.querySelectorAll('body, a, #button, #nav, .lien, .fondViolet,.ecritureBlanche, .ecritureBeige, .backgroundFiche, .arrowMode, .popup, .menuBurger, .nomGOT, .burgerButton');
+        const elements = document.querySelectorAll('body, a, #button, #nav, .lien, .button, .fondViolet, .fondVioletClair, .ecritureBlanche, .ecritureBeige, .backgroundFiche, .arrowMode, .popup, .menuBurger, .nomGOT, .burgerButton, .retour');
         elements.forEach(element => {
             element.classList.add('dark-mode');
             element.classList.remove('light-mode')
@@ -19,8 +20,16 @@ document.addEventListener("DOMContentLoaded", function () {
         selecMoon.src = "icones/moonBlack.svg"
         selecLogo.src="icones/trone2.png"
         selecBurger.src="icones/menuWhiteBurger.svg"
+
+        if (selecArrow) {
+            selecArrow.src="icones/arrowWhite.svg"
+        }
+        
         localStorage.setItem("mode", 'dark-mode');
         console.log(localStorage.getItem("mode"))
+
+
+        
 
         
         for (var i = 0; i < selecAvion.length; i++) { // la boucle for est utilisée pour parcourir tous les éléments HTML avec la classe "image" sélectionnés par querySelectorAll(), et leur donner la couleur souhaitée jusqu'à ce que la condition dans l'en-tête de la boucle (i < images.length) ne soit plus vraie
@@ -34,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     function lightMode() {
-        const elements = document.querySelectorAll('body, a, #button, #nav, .lien, .fondViolet,.ecritureBlanche, .ecritureBeige, .backgroundFiche, .arrowMode, .popup, .menuBurger, .nomGOT, .burgerButton');
+        const elements = document.querySelectorAll('body, a, #button, #nav, .lien, .button, .fondViolet, .fondVioletClair, .ecritureBlanche, .ecritureBeige, .backgroundFiche, .arrowMode, .popup, .menuBurger, .nomGOT, .burgerButton, .retour');
         elements.forEach(element => {
             element.classList.add('light-mode');
             element.classList.remove('dark-mode')
@@ -44,6 +53,11 @@ document.addEventListener("DOMContentLoaded", function () {
         selecMoon.src = "icones/moonWhite.svg"
         selecLogo.src="icones/trone.png"
         selecBurger.src="icones/menuBlackBurger.svg"
+
+        if (selecArrow) {
+            selecArrow.src="icones/arrowBlack.svg"
+        }
+
         localStorage.setItem("mode", 'light-mode')
         console.log(localStorage.getItem("mode"))
         for (var i = 0; i < selecAvion.length; i++) {
@@ -130,6 +144,27 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         
     })
+
+    //Lors de la recherche, scroll jusqu'au résultats sur la page destination
+
+    // Vérifie si l'URL contient "#erreur"
+    if (window.location.hash === "#erreur") {
+        // Trouve l'élément avec l'ID "erreur"
+        var erreurElement = document.getElementById("erreur");
+        if (erreurElement) {
+          // Fait défiler jusqu'à cet élément
+          console.log("trouvé");
+          erreurElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+
+
+    
+
+    // document.addEventListener("DOMContentLoaded", function() {
+        
+    //   });
 
 
 

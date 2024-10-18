@@ -70,13 +70,26 @@
             </div>
         </div>
     </div>
-    <h2 class="description">Venez découvrir les lieux de tournage époustouflants de votre série culte en réservant
-        une de nos multiples excursions aux 4 coins du monde.</h2>
+    <!-- <h2 class="description">Venez découvrir les lieux de tournage époustouflants de votre série culte en réservant
+        une de nos multiples excursions aux 4 coins du monde.</h2> -->
     <div class="slogg">
         <h2 class="sloggan">Westeros vous attend.</h2>
+        <h2 class="description">Venez découvrir les lieux de tournage époustouflants de votre série culte en réservant
+        une de nos multiples excursions aux 4 coins du monde.</h2>
     </div>
 
-    <form action="destinations.php" method="get" class="fondViolet">
+    
+
+
+    
+    <div class="concept fondVioletClair light-mode">
+         <h2 class="titleDescr ecritureBeige">Le concept</h2>
+         <p class="descr">Gotatrip est une plateforme incontournable pour tous les fans de Game of Thrones et les passionnés de voyages uniques. Ce site vous offre la possibilité de réserver des séjours inoubliables qui vous plongeront dans les décors majestueux et mythiques de la célèbre série. Que vous soyez un amateur d'aventures épiques, un amoureux des paysages naturels époustouflants ou simplement en quête de nouvelles expériences, Gotatrip vous propose une sélection de voyages variés et adaptés à tous les goûts.
+
+        Explorez des destinations incroyables aux quatre coins du globe, des falaises abruptes d’Irlande aux rues historiques de Dubrovnik, transformée en la ville royale de Port-Réal. Revivez les scènes emblématiques des Sept Royaumes en marchant sur les traces de vos personnages préférés. </p>
+    </div>
+
+    <form action="destinations.php#erreur" method="get" >
         <div class="searchBar">
             <img src="./icones/loupeBlack.svg" alt="rechercher" class="loupe">
             <label for="search" class="sr-only">Rechercher</label>
@@ -93,12 +106,9 @@
                 <option value="cher">Plus de 200€</option>
             </select>
         </div>
-        <button class="filtre"type="submit">rechercher</button>  
+        <button class="filtre button light-mode"type="submit">Rechercher</button>  
     </form>
-
-
-    <h2 class="propositions fondViolet light-mode">Nos propositions du moment :</h2>
-    
+    <h2 class="ecritureBeige light-mode propositions">Nos propositions du moment</h2>
     <div class="sliderTotal">
         <span class='arrowMode gauche light-mode'></span>
         <div class='js-sliderCarte'>
@@ -112,14 +122,17 @@
                 echo "<a href='ficheDest.php?dest={$row["id_dest"]}'class='lienImg'>
                             <div class='miniFicheDest backgroundFiche light-mode'>
                                  <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
-                                <div class='text'>
-                                    <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
-                                    <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
-                                </div>
-                                <div class='prixContainer'>
-                                    <img src='./icones/avionBlack.svg' class='avion' alt=''>
-                                    <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
-                                </div>
+                                 <div class='blocText'>
+                                        <div class='text'>
+                                            <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
+                                            <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
+                                        </div>
+                                        <div class='prixContainer'>
+                                            <img src='./icones/avionBlack.svg' class='avion' alt=''>
+                                            <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
+                                        </div>
+                                 </div>
+                                
                             </div>
                         </a>";
             }
@@ -132,14 +145,16 @@
                 echo "<a href='ficheDest.php?dest={$row["id_dest"]}'class='lienImg'>
                             <div class='miniFicheDest backgroundFiche light-mode'>
                                  <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
-                                <div class='text'>
-                                    <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
-                                    <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
-                                </div>
-                                <div class='prixContainer'>
-                                    <img src='./icones/avionBlack.svg' class='avion' alt=''>
-                                    <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
-                                </div>
+                                <div class='blocText'>
+                                        <div class='text'>
+                                            <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
+                                            <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
+                                        </div>
+                                        <div class='prixContainer'>
+                                            <img src='./icones/avionBlack.svg' class='avion' alt=''>
+                                            <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
+                                        </div>
+                                 </div>
                             </div>
                         </a>";
             }
@@ -152,13 +167,15 @@
                 echo "<a href='ficheDest.php?dest={$row["id_dest"]}'class='lienImg'>
                 <div class='miniFicheDest backgroundFiche light-mode'>
                      <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
-                    <div class='text'>
-                        <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
-                        <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
-                    </div>
-                    <div class='prixContainer'>
-                        <img src='./icones/avionBlack.svg' class='avion' alt=''>
-                        <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
+                    <div class='blocText'>
+                        <div class='text'>
+                            <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
+                            <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
+                        </div>
+                        <div class='prixContainer'>
+                            <img src='./icones/avionBlack.svg' class='avion' alt=''>
+                            <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
+                        </div>
                     </div>
                 </div>
             </a>";
@@ -171,13 +188,15 @@
                 echo "<a href='ficheDest.php?dest={$row["id_dest"]}' class='lienImg'>
                             <div class='miniFicheDest backgroundFiche light-mode'>
                                  <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
-                                <div class='text'>
-                                    <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
-                                    <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
-                                </div>
-                                <div class='prixContainer'>
-                                    <img src='./icones/avionBlack.svg' class='avion' alt=''>
-                                    <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
+                                <div class='blocText'>
+                                    <div class='text'>
+                                        <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
+                                        <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
+                                    </div>
+                                    <div class='prixContainer'>
+                                        <img src='./icones/avionBlack.svg' class='avion' alt=''>
+                                        <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
+                                    </div>
                                 </div>
                             </div>
                         </a>";
@@ -190,13 +209,15 @@
                 echo "<a href='ficheDest.php?dest={$row["id_dest"]}' class='lienImg'>
                 <div class='miniFicheDest backgroundFiche light-mode'>
                      <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
-                    <div class='text'>
-                        <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
-                        <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
-                    </div>
-                    <div class='prixContainer'>
-                        <img src='./icones/avionBlack.svg' class='avion' alt=''>
-                        <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
+                    <div class='blocText'>    
+                        <div class='text'>
+                            <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
+                            <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
+                        </div>
+                        <div class='prixContainer'>
+                            <img src='./icones/avionBlack.svg' class='avion' alt=''>
+                            <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
+                        </div>
                     </div>
                 </div>
             </a>";
@@ -209,13 +230,15 @@
                 echo "<a href='ficheDest.php?dest={$row["id_dest"]}' class='lienImg'>
                 <div class='miniFicheDest backgroundFiche light-mode'>
                      <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
-                    <div class='text'>
-                        <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
-                        <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
-                    </div>
-                    <div class='prixContainer'>
-                        <img src='./icones/avionBlack.svg' class='avion' alt=''>
-                        <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
+                    <div class='blocText'>
+                        <div class='text'>
+                            <h2 class='nomGOT light-mode'>{$row["nomGOT"]}</h2>
+                            <h2 class='vraiNom ecritureBeige light-mode'>{$row["nomReel"]}, {$row["pays"]}</h2>
+                        </div>
+                        <div class='prixContainer'>
+                            <img src='./icones/avionBlack.svg' class='avion' alt=''>
+                            <h2 class='prix1 ecritureBeige light-mode'>{$row["prix"]}€</h2>
+                        </div>
                     </div>
                 </div>
             </a>";
@@ -229,9 +252,9 @@
     <div class="divLienTout">
         <a href="destinations.php" class="lienTout">VOIR TOUT</a>
     </div>
-    <div class="nouveauteContainer fondViolet light-mode">
+    <div class="nouveauteContainer fondVioletClair light-mode">
         <h2 class="nouveaute ecritureBeige light-mode">Nouveauté !</h2>
-        <h2 class="descrNouveaute">Packs pour découvrir plusieurs lieux de tournage à proximité en road trip :</h2>
+        <h2 class="descrNouveaute">Nous proposons également des packs de voyage sur mesure pour découvrir plusieurs lieux de tournage à proximité lors d'un road trip inoubliable. Que vous soyez fan de la série ou simplement en quête d'aventure, nos itinéraires vous emmèneront à travers des paysages iconiques et des sites où vos personnages préférés ont pris vie.</h2>
     </div>
 
 

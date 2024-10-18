@@ -9,24 +9,13 @@
 
 }
 
-.retourDest {
-    color: #010b12;
-    text-decoration: none;
-    background-color: #fafbfc;
-    border-radius: 20px;
-    padding: 10px;
-    transition: all 0.5s ease-in-out;
-}
-
 .retourDest:hover {
     background-color: #010b12;
     color: #fafbfc;
 }
 
 .formContainer {
-    position:fixed;
-    bottom:0;
-    top:90px;
+    margin-top:80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,27 +24,65 @@
     transition: all 0.5s ease-in-out;
     background-size: cover;
     background-position: bottom;
+    height: fit-content;
+    padding:100px 20px;
 }
 
+/* .maResa{
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    margin:0;
+    top:-50px;
+    left:0;
+} */
+
 form { 
-    padding: 20px;
-    border-radius: 20px;
+    position: relative;
+    padding: 50px 150px;
     display: flex;
     flex-direction: column;
-    backdrop-filter: blur(60px);
+    backdrop-filter: blur(5px);
+    background-color: #fafbfc79;
+    
+}
+.qte{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+input, label, .recap{
+max-width: 400px;
 }
 
 p {
     margin: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom:30px;
 }
 
 input {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    border:none;
+}
+
+#nombre-billets{
+    font-size: 5rem;
+    font-weight:600;
+    background-color: #76353500;
+    text-align: center;
+    color:white;
 }
 
 label {
-    font-size: 1.2rem;
-    color: #fafbfc;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #763535;
+    margin-bottom:-10px;
 }
 
 .champsObligatoires {
@@ -70,22 +97,12 @@ label {
 }
 
 .recap {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-weight: 400;
     margin-bottom: 40px;
     color: #010b12;
-    font-weight: 700;
-    text-transform: uppercase;
 }
 
-.reserve {
-    border-radius: 20px;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    margin: auto;
-
-}
 
 .reserve:hover {
     background-color: #010b12;
@@ -96,13 +113,24 @@ label {
 .decrement {
     width: 30px;
     height: 30px;
-    font-size: 1.2rem;
+    font-size: 2.5rem;
     border-radius: 20px;
     border: none;
-    margin: auto;
-    background-color: #763535;
+    /* margin: auto; */
+    background-color: #76353500;
     color: white;
     cursor: pointer;
+    margin-bottom:20px;
+}
+
+.lienRetour{
+    position:absolute;
+    top:-40px;
+    left:10px;
+}
+
+footer{
+    margin-top:0 !important;
 }
 
 
@@ -111,52 +139,28 @@ label {
 
 
 
-    /*Je gère mtn les textes dont j'augmente la police puisque je mets un flex-wrap*/
 @media(max-width:1024px){
+
     .formContainer{
-        top:50px;
+        margin-top:50px;
     }
 
-    .retourContainer{
-        margin-right:30px;
-        margin-top:80px;
+}
+
+@media(max-width:700px){
+
+    form{
+        padding:20px 50px;
     }
+
+    label{
+        font-size: 1rem;
+        margin-bottom:-5px;
+    }
+
 }
 
 
-@media(max-width:600px) {
-    .recap,.total{
-        font-size:1rem;
-    }
-
-    .retourContainer{
-        margin-right:30px;
-    }
-
-    .retourDest{
-        font-size:0.8rem;
-    }
-
-    label, input{
-        font-size:0.8rem;
-    }
-
-    .champsObligatoires{
-        font-size:0.8rem;
-        margin-left:100px;
-    }
-
-    .increment,.decrement{
-        font-size:0.8rem;
-        width:20px;
-        height:20px;
- 
-    }
-    /*A partir d'une certaine largeur, j'évite les polices en vw car la taille devient trop ridicule avec la largeur d'écran*/
-    .reservation {
-        margin-top: 0;
-    }
 
 
-}
 

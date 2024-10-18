@@ -1,24 +1,25 @@
-
 .img-entete-ensavplus{
     background-image:url(./images/enTetes/enSavoirPlus.jpg);
-    background-position: top;
-    height:45vw; /*Si je mets une plus élevée que celle-là, alors barre de scroll horizontale*/
+    background-position: left;
+    height:100vh; /*Si je mets une plus élevée que celle-là, alors barre de scroll horizontale*/
+    width:100vw;
     background-size:cover;
     background-repeat: no-repeat;
     flex: none;
+    filter:brightness(0.75);
 }
 
 .ensavplus{
     position: absolute;
-    top:46vw;
-    left:2vw;
+    left:30px;
+    bottom:30px;
     font-family: 'Kufam';
     font-style: normal;
     font-weight: 700;
-    font-size: 2.8rem;
+    font-size: 3rem;
     line-height: 62px;
     color:white;
-    border-radius:20px;
+    text-transform: uppercase;
 
 }
 
@@ -65,6 +66,7 @@
 
 .descr{
     margin-bottom:40px;
+    max-width:1000px;
 }
 
 .etape{
@@ -72,7 +74,7 @@
     align-items: flex-start; /*??*/
     gap:20px;
     max-width:500px;
-    margin-bottom:20px;
+    margin-bottom:30px;
     
 }
 
@@ -95,13 +97,13 @@
 }
 
 .img{
-    width:20vw;
-    height:25vw;
+    width:300px;
+    height:400px;
     background-image:url(./images/PhotoSabine.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
-    border-radius:10px;
+    flex-shrink: 0;
 }
 
 .txt{
@@ -111,6 +113,10 @@
 .encre{
     height:20px;
     width:20px;
+}
+
+.descr, .etape, .txt, .mentionsLegales{
+    letter-spacing: 0.3px;
 }
 
 
@@ -139,10 +145,6 @@
 }
 
 @media(max-width:1024px) {    /*Je diminue toutes les tailles de polices*/
-    .ensavplus{
-        font-size:2rem;
-        top:45vw;
-    }
 
     .sloggan2{
         font-size:1rem;
@@ -158,17 +160,14 @@
 
 }
 
-@media(max-width:880px){
-    .ensavplus{
-        font-size:1.8rem;
-    }
+@media(max-width:820px){
 
-    .sloggan2{
+    .descr, .etape, .txt, .mentionsLegales{
         font-size:0.8rem;
     }
 
-    .descr, .etape, .txt, .mentionsLegales{
-        font-size:0.6rem;
+    .img{
+        width:250px;
     }
 
     .txt{
@@ -190,14 +189,7 @@
 }
 
 @media(max-width:680px){
-    .ensavplus{
-        font-size:1.4rem;
-        top:47vw;
-    }
 
-    .descr, .etape, .txt, .mentionsLegales{
-        font-size:0.5rem;
-    }
 
     .creatrice{
         gap:20px;
@@ -220,10 +212,6 @@
 
 
 @media(max-width:600px){
-    .ensavplus{
-        font-size:1.2rem;
-        top:48vw;
-    }
 
     .sloggan2{
         font-size:0.7rem;
@@ -234,9 +222,9 @@
     }
 
     .img{
-        width:70vw;
-        height:30vw;
+        width:100%;
     }
+
     .txt{
         max-width:500px;
     }
@@ -248,30 +236,14 @@
     }
 }
 
-@media(max-width:510px){
+
+
+
+@media(max-width:420px){
+
+
     .ensavplus{
-        font-size:0.8rem;
-        top:50vw;
+        font-size: 2rem;
+    
     }
 }
-
-
-
-@media(max-width:440px){
-    .ensavplus{
-        top:51vw;
-    }
-
-    .sousTitre{
-        font-size:1.2rem;
-    }
-
-}
-
-@media(max-width:400px){
-    .ensavplus{
-        top:52vw;
-    }
-}
-
-

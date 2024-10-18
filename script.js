@@ -186,6 +186,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
+    //Lors de la recherche, scroll jusqu'au résultats sur la page destination
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Vérifie si l'URL contient "#erreur"
+        if (window.location.hash === "#erreur") {
+          // Trouve l'élément avec l'ID "erreur"
+          var erreurElement = document.getElementById("erreur");
+          if (erreurElement) {
+            // Fait défiler jusqu'à cet élément
+            erreurElement.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      });
+
+
 
 })
 

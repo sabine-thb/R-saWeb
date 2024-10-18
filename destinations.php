@@ -55,8 +55,13 @@
         <div class="img-entete-dest">
             <h2 class="nosDest">Nos destinations.</h2>
         </div>
-        <h2 class="citationDestinations fondViolet light-mode" id='destination'>Prêts à vivre cette histoire vous même ?</h2>
-
+        <div class="textDestinations">
+            <h2 class="citationDestinations  ecritureBeige light-mode " id='destination'>Prêts à vivre cette histoire vous même ?</h2>
+            <p class="descrDestinations">Nos packs de voyage vous permettent de visiter plusieurs lieux de tournage en même temps. Pour cela, nous prenons garde à ce que les lieux ne soient pas trop éloignés au niveau de leur localisation.
+            Nous vous proposons alors un parcours adapté au pack choisi qui vous permettra, par l’intermédiaire de nos moyens de transport mis à disposition, d’aller d’une ville à l’autre afin de profiter un maximum des paysages inoubliables que vous allez rencontrer.
+            </p>
+        </div>
+        
         <div class="toutesDest">
         <?php
         include("connexion.php");
@@ -96,37 +101,29 @@
     $stmt = $db->query($requete);
     $result = $stmt->fetchall(PDO::FETCH_ASSOC);
         foreach ($result as $row){
-            echo "<div class='ficheDest backgroundFiche dark-mode'>
+            echo "<div class='ficheDest ficheDest{$row["id_dest"]} dark-mode'>
                         
-                        <div class='js-slider'>
-                            <div class='js-photos imgContainer' data-position id='js-photos-{$row["id_dest"]}' >
-                                <div class='blocimg' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
-                                <div class='blocimg' style='background-image:url(./images/{$row["id_dest"]}/2.jpg);'></div>
-                            </div>
-                            <div class='js-navigation'>
-                                <button class='js-btn-decale-gauche'>
-                                    <span class='arrow' id='f{$row["id_dest"]}'>
-                                        <span class='sr-only'>Image suivante</span>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
+                        <div class='blocimg blocimg{$row["id_dest"]}' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
+                                               
 
-                        <div class='text'>
+                        <div class='text text{$row["id_dest"]}'>
                             <h3 class='nomGOT'>{$row["nomGOT"]}</h3>
                             <h3 class='vraiNom ecritureBeige dark-mode'>{$row["nomReel"]}, {$row["pays"]}</h3>
-                            <p class='descrCourt'>{$row["descriptifCourt"]}</p>
-                            <a href='ficheDest.php?dest={$row["id_dest"]}'class='enSavPlus dark-mode '>En savoir plus sur le lieu de séjour</a>
-                            <div class='prixContainer'>
-                                <img src='./icones/avionBlack.svg' class='avion' alt=''>
-                                <h2 class='prix1 ecritureBeige dark-mode'>{$row["prix"]}€</h2>
+                            <p class='descrCourt descrCourt{$row["id_dest"]}'>{$row["descriptifCourt"]}</p>
+                            <div class='infos'>
+                                <div class='prixContainer'>
+                                    <img src='./icones/avionBlack.svg' class='avion' alt=''>
+                                    <h2 class='prix1 ecritureBeige dark-mode'>{$row["prix"]}€</h2>
+                                </div>
+                                <a href='ficheDest.php?dest={$row["id_dest"]}'class='button light-mode'>Voir plus</a>
+                                
                             </div>
                         </div>
                     </div>";
         }
 
         if (count($result) === 0) {
-            echo "<div class='erreurContainer'>
+            echo "<div class='erreurContainer' id='erreur'>
                         <div class='imgErreur'></div>
                         <h3 class='msgErreur'>Aucune destination ne correspond à votre recherche.</h3>
                     </div>

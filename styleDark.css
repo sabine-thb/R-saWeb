@@ -28,9 +28,6 @@ body {
     line-height: 1.6;
 }
 
-main{
-    margin-top:120px; /*  Je mets un margin-top égal à la hauteur de ma nav pour gérer le positionnement fixed de celle ci */
-}
 
 
 /*Je mets donc en place mon menu visible sur toutes les pages du site*/
@@ -284,8 +281,8 @@ body.dark-mode {
 nav.dark-mode {
     background-color: #010b12;
     box-shadow: 0px 10px 5px 0px rgba(255, 255, 255, 0.08);
-    -webkit-box-shadow: 0px 10px 5px 0px rgba(255, 255, 255, 0.08);
-    -moz-box-shadow: 0px 10px 5px 0px rgba(255, 255, 255, 0.08);
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(255, 255, 255, 0.08);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(255, 255, 255, 0.08);
 }
 
 .menuBurger.dark-mode{
@@ -333,8 +330,17 @@ ul .lien.dark-mode:hover {
 
 .fondViolet.light-mode{
     background-color:#CDC5B5 ;
-    
 
+}
+
+.fondVioletClair.light-mode{
+    background-color: rgba(205, 197, 181, 0.5);
+
+}
+
+.fondVioletClair.dark-mode{
+    background-color: rgba(117, 128, 167, 0.30);
+    color:#fafbfc;
 }
 
 .retourDest.dark-mode{
@@ -415,6 +421,36 @@ ul .lien.dark-mode:hover {
 
 
 
+.button{
+    font-family: 'Kufam', sans-serif;
+    font-size:0.8rem;
+    padding:4px 15px;
+    border:0px;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+    color:white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: padding 0.3s ease-in-out;
+    text-decoration: none;
+    width:fit-content;
+}
+
+.button:hover{
+    padding:4px 20px;
+}
+
+.button.dark-mode{
+    background-color:#fafbfc ;
+    color:#101010;
+}
+
+.retour.dark-mode{
+    color:#fafbfc;
+}
+
+
+
 
 
 
@@ -450,10 +486,6 @@ ul .lien.dark-mode:hover {
         padding-top: 15px;
         position:relative;
         left:-30px;
-    }
-
-    main{ /* Je diminue la hauteur de ma nav*/
-        margin-top:80px;
     }
 
     nav{
@@ -611,6 +643,7 @@ ul .lien.dark-mode:hover {
 
     .burger{
         transition:all 0.2s ease-in-out;
+        cursor: pointer;
     }
 
     .burger:hover{

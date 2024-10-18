@@ -87,6 +87,9 @@ $result=$stmt-> fetchall(PDO::FETCH_ASSOC);
             foreach ($result as $row){
                 echo "
                     <div class='ficheDest'>
+                        <a href='destinations.php' class='lienRetour'>
+                            <img src='' class='retour light-mode' alt='retour'>
+                        </a>
                         <div class='photos'>
                             <div class='photoPrincipale' style='background-image:url(./images/{$row["id_dest"]}/1.jpg');></div>
                             <div class='petitesPhotos'>
@@ -98,7 +101,17 @@ $result=$stmt-> fetchall(PDO::FETCH_ASSOC);
                         <div class='texte'>
                             <h2 class='nomGOT' id='nomPack'>{$row["nomGOT"]}</h2>
                             <h3 class='vraiNom ecritureBeige dark-mode'>{$row["nomReel"]}, {$row["pays"]}</h3>
-                            <p class='descrLong'>{$row["descriptifLong"]}</p>";}?>
+                            <div class='reservation'>
+                            <div class='prixContainer'>
+                                <img src='./icones/avionBlack.svg' class='avion' alt=''>
+                                <h2 class='prix ecritureBeige dark-mode'>{$row["prix"]}€</h2>
+                            </div>
+                            <a href='formulaire.php?dest={$row["id_dest"]}' class='button '>Je réserve</a>
+                        </div>
+                            <p class='descrLong'>{$row["descriptifLong"]}</p>
+                            ";}?>
+
+                            <div class='containerDestAssoc'>
 
                             <?php 
                             $requete2="SELECT * FROM destination WHERE parent_ID=$pack";
@@ -108,9 +121,11 @@ $result=$stmt-> fetchall(PDO::FETCH_ASSOC);
                             foreach ($result2 as $row){
                                 echo"
 
-                            <div class='containerDestAssoc'>
-                                <a href='ficheDest.php?dest={$row["id_dest"]}' class='destAssoc' >{$row["nomGOT"]}</a>
-                            </div>";}?>
+                            
+                                <a href='ficheDest.php?dest={$row["id_dest"]}' class='button' >{$row["nomGOT"]}</a>
+                            ";}?>
+
+                            </div>
                             
                         <?php 
                             $requete="SELECT * FROM destination WHERE id_dest=$pack";
@@ -121,13 +136,7 @@ $result=$stmt-> fetchall(PDO::FETCH_ASSOC);
                         </div>
                     </div>
                     <div>
-                        <div class='reservation'>
-                            <div class='prixContainer'>
-                                <img src='./icones/avionBlack.svg' class='avion' alt=''>
-                                <h2 class='prix ecritureBeige dark-mode'>{$row["prix"]}€<span class='regular'>/pers</span></h2>
-                            </div>
-                            <a href='formulaire.php?dest={$row["id_dest"]}' class='boutonReserve '>Je réserve</a>
-                        </div>
+                        
                         
                     </div>";} ?>
                         
