@@ -97,7 +97,7 @@
         <div class="sousTitreContainer" id="mentionsLegales">
             <h2 class="sousTitre ecritureBeige light-mode">Mention légales</h2>
         </div>
-        <div class="section  fondViolet light-mode">
+        <div class="section ml fondViolet light-mode">
             <div class="mentionsLegales">
                 <p>Hébergeur : o2switch.fr - 222-224 Boulevard Gustave Flaubert - 63000 Clermont-Ferrand, France</p>
                 <p>Ce site, fait dans le cadre d'un projet étudiant, ne permet pas de faire de vrais achats. Vos données rentrées dans le formulaire au moment de la réservation ne seront jamais transmises à des tiers ou commercialisées. Ces données sont conservées dans la base de données du site web, accessible uniquement par sa créatrice. Si vous avez une éventuelle demande concernant la suppression de vos données, vous pouvez vous adresser directement à l'adresse suivante : sabine.thibout@univ-eiffel.fr. 
@@ -147,6 +147,13 @@
 
     <script src="scriptEnSavoirPlus.js"></script>
     <script src="scriptDarkMode.js"></script>
+
+        <!-- Inclusion des scripts via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+
+    <script src="./animations/savPlus.js"></script>
 
 </body>
 

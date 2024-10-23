@@ -75,12 +75,12 @@
         foreach ($result as $row){
             echo "
             <h2 class='nomGOT'>{$row["nomGOT"]}</h2>
-            <div class='fichePack'>
+            <div class='fichePack fiche{$row["id_dest"]}'>
                         
-                            <div class='photos' data-position id='js-photos-{$row["id_dest"]}'>
-                                <div class='blocimg' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
-                                <div class='blocimg ' style='background-image:url(./images/{$row["id_dest"]}/2.jpg);'></div>
-                                <div class='blocimg blocimg{$row["id_dest"]}' style='background-image:url(./images/{$row["id_dest"]}/3.jpg);'></div>   
+                            <div class='photos ' data-position id='js-photos-{$row["id_dest"]}'>
+                                <div class='blocimg blocimg{$row["id_dest"]}' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
+                                <div class='blocimg  blocimg{$row["id_dest"]}' style='background-image:url(./images/{$row["id_dest"]}/2.jpg);'></div>
+                                <div class='blocimg blocimg{$row["id_dest"]} img{$row["id_dest"]}' style='background-image:url(./images/{$row["id_dest"]}/3.jpg);'></div>   
                             </div>
                 
 
@@ -134,6 +134,14 @@
     
     <script src="scriptPacks.js"></script>
     <script src="scriptDarkMode.js"></script>
+
+
+         <!-- Inclusion des scripts via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+
+    <script src="./animations/packs.js"></script>
 
 </body>
 

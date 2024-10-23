@@ -165,7 +165,7 @@
             $result=$stmt -> fetchall(PDO::FETCH_ASSOC); //Je dis de récupérer les résultats sous forme de tableau associatif ac le FETCH_ASSOC
             foreach ($result as $row){
                 echo "<a href='ficheDest.php?dest={$row["id_dest"]}'class='lienImg'>
-                <div class='miniFicheDest backgroundFiche light-mode'>
+                <div class='miniFicheDest anim  backgroundFiche light-mode'>
                      <div class='blocimg imageTransition' style='background-image:url(./images/{$row["id_dest"]}/1.jpg);'></div>
                     <div class='blocText'>
                         <div class='text'>
@@ -314,6 +314,13 @@
 
     <script src="script.js"></script>
     <script src="scriptDarkMode.js"></script>
+
+     <!-- Inclusion des scripts via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+
+    <script src="./animations/accueil.js"></script>
 </body>
 
 </html>

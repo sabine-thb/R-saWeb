@@ -400,6 +400,7 @@ select{
 .fichePack{
     width:35vw;
     height:40vw;
+    position: relative;
 }
 
 .nomGOT2{
