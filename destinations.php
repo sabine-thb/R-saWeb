@@ -57,8 +57,7 @@
         </div>
         <div class="textDestinations">
             <h2 class="citationDestinations  ecritureBeige light-mode " id='destination'>Prêts à vivre cette histoire vous même ?</h2>
-            <p class="descrDestinations">Nos packs de voyage vous permettent de visiter plusieurs lieux de tournage en même temps. Pour cela, nous prenons garde à ce que les lieux ne soient pas trop éloignés au niveau de leur localisation.
-            Nous vous proposons alors un parcours adapté au pack choisi qui vous permettra, par l’intermédiaire de nos moyens de transport mis à disposition, d’aller d’une ville à l’autre afin de profiter un maximum des paysages inoubliables que vous allez rencontrer.
+            <p class="descrDestinations">Plongez dans l'univers épique de Game of Thrones en visitant les incroyables lieux de tournage qui ont donné vie à Westeros et Essos. Découvrez des paysages à couper le souffle, des châteaux médiévaux aux plages sauvages, qui ont servi de toile de fond aux intrigues et batailles légendaires de la série. Ce voyage unique vous permettra de marcher sur les traces de vos personnages préférés tout en explorant des décors naturels majestueux et des sites historiques fascinants. Une expérience inoubliable qui mêle culture, aventure et immersion totale dans l'univers de la série culte.
             </p>
         </div>
         

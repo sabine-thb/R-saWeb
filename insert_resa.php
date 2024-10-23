@@ -72,7 +72,6 @@
 
         $total=$nombreBillets*$prixIndividuel;
 
-        
 
         $requete1="INSERT INTO clients (nom, prenom, mail) VALUES ('$nom','$prenom','$mail')";
         $db->query($requete1);
@@ -112,9 +111,8 @@
         if (isset($_GET["soumettre"])){
             echo"
             
-            <div class='retourContainer'>
-                <a href='index.php' class='retour'>Retour à l'accueil</a>
-            </div>
+
+            <a href='index.php' class='button'>Retour à l'accueil</a>
             <div class='msgConfirmContainer'>
                 <h2 class='msgConfirm'>Merci pour votre réservation ! Un mail récapitulatif vous a été envoyé.</h2>
             </div>
@@ -131,6 +129,32 @@
     ?>
 
     </main>
+    <footer class="footer fondViolet light-mode">
+        <div class="footerPartGauche">
+            <div class="footerContainer1">
+                <img src="./icones/trone.png" alt="" class="footerTrone">
+                <h1 class="titreFooter ecritureBeige light-mode">Gotatrip</h1>
+            </div>
+            <p class="footerDescription">Gotatrip est un site qui vous permet de réserver des billets d’avion pour vous envoler vers les lieux de tournage de la série culte Game Of Thrones. Vous pourrez découvrir certains paysages extraordinaires d’Essos ou de Westeros après avoir choisi la destination qui vous fait le plus rêver.</p>
+        </div>
+
+        <div class="footerPartDroite">
+            <div class="plan">
+                <h2 class=" sTitreFooter ecritureBeige light-mode">Plan du site</h2>
+                <a href="destinations.php" class="lienFooter">Nos destinations</a>
+                <a href="packs.php" class="lienFooter">Nos packs</a>
+                <a href="enSavoirPlus.php" class="lienFooter">En savoir plus</a>
+            </div>
+
+            <div class="savPlus">
+                <h2 class=" sTitreFooter ecritureBeige light-mode">En savoir plus</h2>
+                <a href="enSavoirPlus.php#concept" class="lienFooter">Le concept</a>
+                <a href="enSavoirPlus.php#creatrice" class="lienFooter">La créatrice</a>
+                <a href="enSavoirPlus.php#mentionsLegales" class="lienFooter">Mentions légales</a>
+            </div>
+        </div>
+
+    </footer>
    
    
     
